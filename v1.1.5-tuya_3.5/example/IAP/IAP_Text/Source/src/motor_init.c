@@ -351,27 +351,27 @@ void open_curtain(void)
 	motor_stop();
 
 	motor_pwr(PWR_ON);
-	ms_delay_systick(80);
+	ms_delay_systick(300);
 	
 	PB2_PWM_INIT(80,ENABLE);
 	PB3_PWM_INIT(100,ENABLE);
-	ms_delay_systick(80);
+	ms_delay_systick(20);
 	
 	PB2_PWM_INIT(60,ENABLE);
 	PB3_PWM_INIT(100,ENABLE);
-	ms_delay_systick(80);
+	ms_delay_systick(20);
 	
 	PB2_PWM_INIT(40,ENABLE);
 	PB3_PWM_INIT(100,ENABLE);
-	ms_delay_systick(80);
+	ms_delay_systick(20);
 	
 	PB2_PWM_INIT(20,ENABLE);
 	PB3_PWM_INIT(100,ENABLE);
-	ms_delay_systick(80);
+	ms_delay_systick(20);
 	 
 	PB2_PWM_INIT(0,ENABLE);
 	PB3_PWM_INIT(100,ENABLE);
-	// ms_delay_systick(100);
+	ms_delay_systick(20);
 
 	signPositive_inversion = 1;
 }
@@ -385,27 +385,27 @@ void close_curtain(void)
 	
 	
 	motor_pwr(PWR_ON);
-	ms_delay_systick(80);
+	ms_delay_systick(300);
 	
 	PB2_PWM_INIT(100,ENABLE);
 	PB3_PWM_INIT(80,ENABLE);
-	ms_delay_systick(80);
+	ms_delay_systick(20);
 	
 	PB2_PWM_INIT(100,ENABLE);
 	PB3_PWM_INIT(60,ENABLE);
-	ms_delay_systick(80);
+	ms_delay_systick(20);
 	
 	PB2_PWM_INIT(100,ENABLE);
 	PB3_PWM_INIT(40,ENABLE);
-	ms_delay_systick(80);
+	ms_delay_systick(20);
 	
 	PB2_PWM_INIT(100,ENABLE);
 	PB3_PWM_INIT(20,ENABLE);
-	ms_delay_systick(80);
+	ms_delay_systick(20);
 
 	PB2_PWM_INIT(100,ENABLE);
 	PB3_PWM_INIT(0,ENABLE);
-	// ms_delay_systick(20);
+	ms_delay_systick(20);
 	signPositive_inversion = 2;
 }
 

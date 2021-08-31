@@ -1,8 +1,8 @@
 /*
  * @Author: i4season.xiang
  * @Date: 2021-03-24 09:52:24
- * @LastEditTime: 2021-08-30 22:37:24
- * @FilePath: \v1.1.5-tuya_3.5\example\IAP\IAP_Text\Source\src\head.c
+ * @LastEditTime: 2021-08-31 15:39:11
+ * @FilePath: \curtain\v1.1.5-tuya_3.5\example\IAP\IAP_Text\Source\src\head.c
  */
 #include "head.h"
 #include "stdlib.h"
@@ -74,7 +74,7 @@ void key_delay_process_start(void);
 
 void I4_LockedRotorCallback(void)
 {
-	KeyControl = FALSE;
+
 	ms_delay_systick(1000);
 	if(signPositive_inversion == 1)
 	{
@@ -90,7 +90,7 @@ void I4_LockedRotorCallback(void)
 		motor_stop();
 		signPositive_inversion = 0;
 	}
-	KeyControl = TRUE;
+
 	percor.key = 0;
 
 }
@@ -604,7 +604,7 @@ void update_curtain_position(u8 percentage)
 	gptm0_4low = 0;
 	cnt_switch = 0;
 	ptime.cnt_flag = 0;
-	KeyControl = FALSE;
+	
 
 }
 
@@ -647,7 +647,7 @@ void timer_curtain_control_callback(void)
 					signStallCnt = VS_TimeCalibraCnt;
 			
 					VS_Calibrationtime =  (variable.returntime /2);
-					
+					KeyControl = FALSE;
 					printf("VS_Calibrationtime =%d\r\n",VS_Calibrationtime);
 				}else{
 					motor_stop();

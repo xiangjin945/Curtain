@@ -1,8 +1,8 @@
 /*
  * @Author: i4season.xiang
  * @Date: 2021-02-03 18:10:57
- * @LastEditTime: 2021-08-31 10:14:31
- * @FilePath: \v1.1.5-tuya_3.5\example\IAP\IAP_Text\Src_AP\main.c
+ * @LastEditTime: 2021-08-31 15:23:39
+ * @FilePath: \curtain\v1.1.5-tuya_3.5\example\IAP\IAP_Text\Src_AP\main.c
  */
 /*********************************************************************************************************/ /**
  * @file    IAP/IAP_Text/Src_AP/main.c
@@ -34,7 +34,7 @@
 /* Includes ------------------------------------------------------------------------------------------------*/
 #include "head.h"
 
-#define HTCFG_PWRCU_LVDS             (PWRCU_LVDS_2V7)
+#define HTCFG_PWRCU_LVDS             (PWRCU_LVDS_2V85)
 
 u8 license_readback(void)
 {
@@ -111,7 +111,6 @@ int main(void)
 	}
 #endif
 
-	
 }
 
 

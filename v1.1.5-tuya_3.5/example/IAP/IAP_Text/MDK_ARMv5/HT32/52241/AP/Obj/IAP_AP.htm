@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\HT32\52241\AP\Obj\IAP_AP.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\HT32\52241\AP\Obj\IAP_AP.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Tue Aug 31 10:31:20 2021
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Tue Aug 31 15:50:55 2021
 <BR><P>
 <H3>Maximum Stack Usage =        468 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -161,9 +161,9 @@ Global Symbols
 <LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bftm_onfiguration
 <LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CKCU_GetClocksFrequency
 <LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Init
+<LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;file_crc_check_in_flash
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pause_handler
 <LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4CourseDirection
-<LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;file_crc_check_in_flash
 <LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;localtime
 <LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
 </UL>
@@ -222,13 +222,13 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[eb]"></a>__aeabi_memcpy</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, memcpya.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_download_curtain_countdown_time
-<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_curtain_timer_task
-<LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_flash_write
+<BR><BR>[Called By]<UL><LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_flash_write
 <LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_flash_read
 <LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_ota_file_info_req
 <LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_ota_data_req
 <LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_bt_uart_buffer
+<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_download_curtain_countdown_time
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_curtain_timer_task
 </UL>
 
 <P><STRONG><a name="[ec]"></a>__aeabi_memcpy4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text))
@@ -253,11 +253,11 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[b2]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_download_curtain_countdown_time
-<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_curtain_timer_task
-<LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;on_data_write_request_sched
+<BR><BR>[Called By]<UL><LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;on_data_write_request_sched
 <LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_ota_file_info_req
 <LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_ota_data_req
+<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_download_curtain_countdown_time
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_curtain_timer_task
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timing_task_program
 </UL>
 
@@ -351,8 +351,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
 <LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
-<LI><a href="#[37]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ldivmod
+<BR>[Called By]<UL><LI><a href="#[37]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ldivmod
+<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 
 <P><STRONG><a name="[3a]"></a>__aeabi_llsl</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, llshl.o(.text))
@@ -552,8 +552,8 @@ Global Symbols
 <P><STRONG><a name="[58]"></a>CountdownFlashDataHandle</STRONG> (Thumb, 174 bytes, Stack size 32 bytes, head.o(i.CountdownFlashDataHandle))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = CountdownFlashDataHandle &rArr; __2printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uread4
+<BR>[Calls]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uread4
+<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fun_setup_interrupt
 </UL>
@@ -630,17 +630,17 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[61]"></a>Exit_Init</STRONG> (Thumb, 390 bytes, Stack size 16 bytes, low_power_iniit.o(i.Exit_Init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = Exit_Init &rArr; AFIO_GPxConfig
+<BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = Exit_Init &rArr; CKCU_PeripClockConfig
 </UL>
 <BR>[Calls]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_WakeupEventIntConfig
 <LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ReadInBit
+<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_WakeupEventConfig
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CKCU_PeripClockConfig
+<LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RSTCU_PeripReset
 <LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PullResistorConfig
 <LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_InputConfig
 <LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AFIO_GPxConfig
 <LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AFIO_EXTISourceConfig
-<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_WakeupEventConfig
-<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CKCU_PeripClockConfig
-<LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RSTCU_PeripReset
 <LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_EnableIRQ
 </UL>
 <BR>[Called By]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;low_power_init
@@ -652,15 +652,15 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_WaitForOperationEnd
 </UL>
 <BR>[Called By]<UL><LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;global_arg_fun
+<LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_flash_erase
+<LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;on_data_write_request_sched
+<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;data_handle
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_test_uart_service
 <LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Coundownswitch_EraseWrite
 <LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Coundownflag_EraseWrite
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_download_curtain_countdown_time
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_curtain_timer_task
 <LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_factor_reset_notify
-<LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_flash_erase
-<LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;on_data_write_request_sched
-<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;data_handle
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_test_uart_service
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timing_task_program
 </UL>
 
@@ -675,12 +675,12 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_WaitForOperationEnd
 </UL>
-<BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_download_curtain_countdown_time
-<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_curtain_timer_task
-<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_factor_reset_notify
-<LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_flash_write
+<BR>[Called By]<UL><LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_flash_write
 <LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;on_data_write_request_sched
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_test_uart_service
+<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_download_curtain_countdown_time
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_curtain_timer_task
+<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_factor_reset_notify
 <LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WriteFlashGlobalCallBack
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timing_task_program
 </UL>
@@ -731,13 +731,13 @@ Global Symbols
 <LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LVD_BOD_IRQHandler
 <LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EVWUP_IRQHandler
 <LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_init
-<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDFlashing_1s
 <LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_download_control_handle
 <LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;data_handle
 <LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4_LedTwinkle
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_test_uart_service
 <LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;motor_pwr
 <LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tybn1_join_sleep_mode
+<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDFlashing_1s
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;low_power_consump_fun
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NoNetworkLedFlashing
 <LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDFlashingCALLBack
@@ -774,17 +774,17 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ManualCalibraCallBack
 </UL>
 
-<P><STRONG><a name="[74]"></a>I4CompleteHandler</STRONG> (Thumb, 270 bytes, Stack size 24 bytes, tst_function.o(i.I4CompleteHandler))
+<P><STRONG><a name="[74]"></a>I4CompleteHandler</STRONG> (Thumb, 258 bytes, Stack size 24 bytes, tst_function.o(i.I4CompleteHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 148<LI>Call Chain = I4CompleteHandler &rArr; I4ReturnManualHandler &rArr; motor_stop &rArr; PB3_PWM_INIT &rArr; __aeabi_idivmod &rArr; __aeabi_uidivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;update_current_runtime
-<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;open_curtain
+<BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;open_curtain
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ms_delay_systick
 <LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;motor_stop
 <LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;close_curtain
 <LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_value_update
-<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;update_current_runtime
 <LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4ReturnManualHandler
+<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;calibration_test
 </UL>
@@ -792,9 +792,9 @@ Global Symbols
 <P><STRONG><a name="[7b]"></a>I4CountdownDataClear</STRONG> (Thumb, 76 bytes, Stack size 8 bytes, head.o(i.I4CountdownDataClear))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = I4CountdownDataClear &rArr; usart0_send
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart0_send
+<BR>[Calls]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_check_sum
+<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart0_send
 <LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart0_send
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_check_sum
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;all_data_update_fun
 </UL>
@@ -835,16 +835,16 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;motor_stop
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ManualCalibraCallBack
-<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4CompleteHandler
+<BR>[Called By]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4CompleteHandler
+<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ManualCalibraCallBack
 </UL>
 
 <P><STRONG><a name="[84]"></a>I4TimerDataClear</STRONG> (Thumb, 92 bytes, Stack size 8 bytes, head.o(i.I4TimerDataClear))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = I4TimerDataClear &rArr; usart0_send
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart0_send
+<BR>[Calls]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_check_sum
+<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart0_send
 <LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart0_send
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_check_sum
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;all_data_update_fun
 </UL>
@@ -884,7 +884,7 @@ Global Symbols
 <LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4_FullInspection
 </UL>
 
-<P><STRONG><a name="[8a]"></a>I4_LockedRotorCallback</STRONG> (Thumb, 64 bytes, Stack size 16 bytes, head.o(i.I4_LockedRotorCallback))
+<P><STRONG><a name="[8a]"></a>I4_LockedRotorCallback</STRONG> (Thumb, 58 bytes, Stack size 16 bytes, head.o(i.I4_LockedRotorCallback))
 <BR><BR>[Stack]<UL><LI>Max Depth = 124<LI>Call Chain = I4_LockedRotorCallback &rArr; open_curtain &rArr; motor_stop &rArr; PB3_PWM_INIT &rArr; __aeabi_idivmod &rArr; __aeabi_uidivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;open_curtain
@@ -926,12 +926,12 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[93]"></a>I4_Timecallback</STRONG> (Thumb, 198 bytes, Stack size 24 bytes, head.o(i.I4_Timecallback))
+<P><STRONG><a name="[93]"></a>I4_Timecallback</STRONG> (Thumb, 200 bytes, Stack size 24 bytes, head.o(i.I4_Timecallback))
 <BR><BR>[Stack]<UL><LI>Max Depth = 360<LI>Call Chain = I4_Timecallback &rArr; dp_download_curtain_countdown_time &rArr; mcu_dp_value_update &rArr; bt_uart_write_frame &rArr; uart_transmit_output &rArr; uart_transmit_output_fun &rArr; ms_delay_systick
 </UL>
-<BR>[Calls]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_download_curtain_countdown_time
+<BR>[Calls]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_bool_update
+<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_download_curtain_countdown_time
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_curtain_timer_task
-<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_bool_update
 <LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;localtime
 <LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_time_zone
 </UL>
@@ -969,9 +969,9 @@ Global Symbols
 <P><STRONG><a name="[92]"></a>LockedRotorDetection</STRONG> (Thumb, 100 bytes, Stack size 24 bytes, head.o(i.LockedRotorDetection))
 <BR><BR>[Stack]<UL><LI>Max Depth = 164<LI>Call Chain = LockedRotorDetection &rArr; Pause_handler &rArr; LockedRotorMotorCallback &rArr; open_curtain &rArr; motor_stop &rArr; PB3_PWM_INIT &rArr; __aeabi_idivmod &rArr; __aeabi_uidivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pause_handler
+<BR>[Calls]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_enum_update
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pause_handler
 <LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDFlashing_1s
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_enum_update
 <LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4_MainTask
@@ -1010,9 +1010,9 @@ Global Symbols
 <P><STRONG><a name="[9f]"></a>PB2_PWM_INIT</STRONG> (Thumb, 122 bytes, Stack size 64 bytes, motor_init.o(i.PB2_PWM_INIT))
 <BR><BR>[Stack]<UL><LI>Max Depth = 92<LI>Call Chain = PB2_PWM_INIT &rArr; __aeabi_idivmod &rArr; __aeabi_uidivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AFIO_GPxConfig
-<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CKCU_PeripClockConfig
+<BR>[Calls]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CKCU_PeripClockConfig
 <LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCTM_CHMOECmd
+<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AFIO_GPxConfig
 <LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TM_TimeBaseInit
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TM_OutputInit
 <LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TM_Cmd
@@ -1027,8 +1027,8 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 92<LI>Call Chain = PB3_PWM_INIT &rArr; __aeabi_idivmod &rArr; __aeabi_uidivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TM_ClearFlag
-<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AFIO_GPxConfig
 <LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CKCU_PeripClockConfig
+<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AFIO_GPxConfig
 <LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TM_TimeBaseInit
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TM_OutputInit
 <LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TM_Cmd
@@ -1076,17 +1076,17 @@ Global Symbols
 <P><STRONG><a name="[9c]"></a>Pause_handler</STRONG> (Thumb, 230 bytes, Stack size 24 bytes, head.o(i.Pause_handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 140<LI>Call Chain = Pause_handler &rArr; LockedRotorMotorCallback &rArr; open_curtain &rArr; motor_stop &rArr; PB3_PWM_INIT &rArr; __aeabi_idivmod &rArr; __aeabi_uidivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;update_current_runtime
-<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;motor_stop
+<BR>[Calls]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;motor_stop
 <LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_value_update
-<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;update_current_runtime
 <LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 <LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;key_delay_process_start
 <LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LockedRotorMotorCallback
 <LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Percentage_control
+<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_curtain_control
-<LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_download_control_handle
+<BR>[Called By]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_download_control_handle
+<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_curtain_control
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LockedRotorDetection
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;motor_turn
 </UL>
@@ -1272,15 +1272,15 @@ Global Symbols
 <LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_ProgramWordData
 <LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_ErasePage
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_SetCompare
-<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_curtain_control
 <LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_raw_update
-<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Common_timing_data_processing
 <LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_real_time
-<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_curtain_control
 <LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 <LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;perc_Boundary_process
 <LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;alarm_perc_Boundary_process
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timing_echofun
+<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Common_timing_data_processing
+<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4_MainTask
 </UL>
@@ -1313,9 +1313,9 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[21]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fputc
 <LI><a href="#[1a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART0_IRQHandler
 <LI><a href="#[1b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART0_IRQHandler
+<LI><a href="#[12e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_transmit_output_fun
 <LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart0_send
 <LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart0_send
-<LI><a href="#[12e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_transmit_output_fun
 </UL>
 
 <P><STRONG><a name="[b7]"></a>USART_Init</STRONG> (Thumb, 94 bytes, Stack size 16 bytes, ht32f5xxxx_usart.o(i.USART_Init))
@@ -1335,10 +1335,10 @@ Global Symbols
 
 <P><STRONG><a name="[de]"></a>USART_SendData</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, ht32f5xxxx_usart.o(i.USART_SendData))
 <BR><BR>[Called By]<UL><LI><a href="#[21]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fputc
-<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart0_send
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart0_send
 <LI><a href="#[12e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_transmit_output_fun
 <LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;data_handle
+<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart0_send
+<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart0_send
 </UL>
 
 <P><STRONG><a name="[12d]"></a>USART_TxRxCmd</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, ht32f5xxxx_usart.o(i.USART_TxRxCmd))
@@ -1368,15 +1368,14 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LVD_BOD_IRQHandler
 <LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WAKEUP_Button_Process
 <LI><a href="#[20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;all_data_update_fun
+<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;data_handle
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_test_uart_service
 <LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_battery_level
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pause_handler
 <LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_download_handle
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_download_curtain_countdown_time
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_curtain_timer_task
-<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;all_data_update_fun
-<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;data_handle
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_test_uart_service
-<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ManualCalibraCallBack
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_curtain_control_callback
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LockedRotorDetection
 <LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CountdownFlashDataHandle
@@ -1386,18 +1385,19 @@ Global Symbols
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timing_task_program
 <LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4LaunchHandler
 <LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4CompleteHandler
+<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ManualCalibraCallBack
 </UL>
 
 <P><STRONG><a name="[50]"></a>__ARM_common_switch8</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, ht32f5xxxx_ckcu.o(i.__ARM_common_switch8))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __ARM_common_switch8
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CKCU_GetClocksFrequency
-<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_download_handle
 <LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_ota_proc
 <LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;data_handle
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_test_uart_service
 <LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_common_uart_data_unpack
 <LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_common_test_uart_data_unpack
+<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_download_handle
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timing_echofun
 </UL>
 
@@ -1410,14 +1410,14 @@ Global Symbols
 <P><STRONG><a name="[bc]"></a>adc_init</STRONG> (Thumb, 98 bytes, Stack size 8 bytes, adc_init.o(i.adc_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = adc_init &rArr; ADC_DeInit &rArr; RSTCU_PeripReset
 </UL>
-<BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AFIO_GPxConfig
-<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_SoftwareStartConvCmd
+<BR>[Calls]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_SoftwareStartConvCmd
 <LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_RegularTrigConfig
 <LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_RegularGroupConfig
 <LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_RegularChannelConfig
 <LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_IntConfig
 <LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_DeInit
 <LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Cmd
+<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AFIO_GPxConfig
 </UL>
 <BR>[Called By]<UL><LI><a href="#[20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;low_power_consump_fun
@@ -1427,8 +1427,8 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 196<LI>Call Chain = alarm_perc_Boundary_process &rArr; timer_curtain_control &rArr; Pause_handler &rArr; LockedRotorMotorCallback &rArr; open_curtain &rArr; motor_stop &rArr; PB3_PWM_INIT &rArr; __aeabi_idivmod &rArr; __aeabi_uidivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_WriteOutBits
-<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_curtain_control
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ms_delay_systick
+<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_curtain_control
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timing_task_program
 </UL>
@@ -1535,9 +1535,6 @@ Global Symbols
 <LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_transmit_output
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_send_mcu_ver
-<LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;product_info_update
-<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;heat_beat_check
-<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_mcu_bt_mode
 <LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_ota_proc
 <LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;on_data_write_request_sched
 <LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_ota_offset_req
@@ -1549,6 +1546,9 @@ Global Symbols
 <LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_fault_update
 <LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_enum_update
 <LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_bool_update
+<LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;product_info_update
+<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;heat_beat_check
+<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_mcu_bt_mode
 </UL>
 
 <P><STRONG><a name="[116]"></a>byte_to_int</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, mcu_api.o(i.byte_to_int))
@@ -1556,12 +1556,12 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[8d]"></a>calibration_test</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, tst_function.o(i.calibration_test))
-<BR><BR>[Stack]<UL><LI>Max Depth = 156<LI>Call Chain = calibration_test &rArr; ManualCalibraCallBack &rArr; stop_fun &rArr; motor_stop &rArr; PB3_PWM_INIT &rArr; __aeabi_idivmod &rArr; __aeabi_uidivmod
+<BR><BR>[Stack]<UL><LI>Max Depth = 156<LI>Call Chain = calibration_test &rArr; I4ReturnJourneyHandler &rArr; stop_fun &rArr; motor_stop &rArr; PB3_PWM_INIT &rArr; __aeabi_idivmod &rArr; __aeabi_uidivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ManualCalibraCallBack
-<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4ReturnJourneyHandler
+<BR>[Calls]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4ReturnJourneyHandler
 <LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4LaunchHandler
 <LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4CompleteHandler
+<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ManualCalibraCallBack
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4_MainTask
 </UL>
@@ -1593,7 +1593,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[78]"></a>close_curtain</STRONG> (Thumb, 142 bytes, Stack size 8 bytes, motor_init.o(i.close_curtain))
+<P><STRONG><a name="[78]"></a>close_curtain</STRONG> (Thumb, 150 bytes, Stack size 8 bytes, motor_init.o(i.close_curtain))
 <BR><BR>[Stack]<UL><LI>Max Depth = 108<LI>Call Chain = close_curtain &rArr; motor_stop &rArr; PB3_PWM_INIT &rArr; __aeabi_idivmod &rArr; __aeabi_uidivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ms_delay_systick
@@ -1603,15 +1603,15 @@ Global Symbols
 <LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;motor_pwr
 </UL>
 <BR>[Called By]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4_ProductionTest
-<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_curtain_control
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_test_uart_service
-<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ManualCalibraCallBack
+<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_curtain_control
 <LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LockedRotorMotorCallback
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4_LockedRotorCallback
 <LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4_FullInspection
 <LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4ReturnJourneyHandler
 <LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4LaunchHandler
 <LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4CompleteHandler
+<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ManualCalibraCallBack
 </UL>
 
 <P><STRONG><a name="[d6]"></a>data_handle</STRONG> (Thumb, 710 bytes, Stack size 64 bytes, system.o(i.data_handle))
@@ -1621,15 +1621,6 @@ Global Symbols
 <LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_WriteOutBits
 <LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_ErasePage
 <LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8
-<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart0_send
-<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_battery_level
-<LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;product_info_update
-<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;heat_beat_check
-<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_mcu_bt_mode
-<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_download_cmd_total
-<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_download_handle
-<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_factor_reset_notify
-<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;all_data_update
 <LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;all_data_update_fun
 <LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_ota_proc
 <LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_ota_init_disconnect
@@ -1639,8 +1630,17 @@ Global Symbols
 <LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_memcpy
 <LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_memcmp
 <LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_atoll
-<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart0_send
+<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_battery_level
+<LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;product_info_update
+<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;heat_beat_check
+<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_mcu_bt_mode
+<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_download_cmd_total
+<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_download_handle
+<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_factor_reset_notify
+<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;all_data_update
 <LI><a href="#[37]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ldivmod
+<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_uart_service
 </UL>
@@ -1652,8 +1652,8 @@ Global Symbols
 <P><STRONG><a name="[ea]"></a>dismiss_bind</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, tst_function.o(i.dismiss_bind))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = dismiss_bind &rArr; uart0_send
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart0_send
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_check_sum
+<BR>[Calls]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_check_sum
+<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart0_send
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;motor_turn
 </UL>
@@ -1665,11 +1665,11 @@ Global Symbols
 <LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_ProgramWordData
 <LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_ErasePage
 <LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_raw_update
-<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 <LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 <LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 <LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
 <LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_download_handle
 <LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4_Timecallback
@@ -1682,10 +1682,10 @@ Global Symbols
 <LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_ProgramWordData
 <LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_ErasePage
 <LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_value_update
-<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 <LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 <LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 <LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uread4
+<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_download_handle
 <LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4_Timecallback
@@ -1695,14 +1695,6 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 360<LI>Call Chain = dp_download_handle &rArr; dp_download_curtain_countdown_time &rArr; mcu_dp_value_update &rArr; bt_uart_write_frame &rArr; uart_transmit_output &rArr; uart_transmit_output_fun &rArr; ms_delay_systick
 </UL>
 <BR>[Calls]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8
-<LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;arg_erase_write
-<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDFlashing_1s
-<LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CurtainModeEraseWrite
-<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Coundownswitch_EraseWrite
-<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Coundownflag_EraseWrite
-<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_curtain_control
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_download_curtain_countdown_time
-<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_curtain_timer_task
 <LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_download_control_handle
 <LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;motor_stop
 <LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_get_dp_download_value
@@ -1711,6 +1703,14 @@ Global Symbols
 <LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_fault_update
 <LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_enum_update
 <LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_bool_update
+<LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;arg_erase_write
+<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDFlashing_1s
+<LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CurtainModeEraseWrite
+<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Coundownswitch_EraseWrite
+<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Coundownflag_EraseWrite
+<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_curtain_control
+<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_download_curtain_countdown_time
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_curtain_timer_task
 <LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;data_handle
@@ -1727,8 +1727,8 @@ Global Symbols
 <P><STRONG><a name="[f5]"></a>fun_setup_interrupt</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, head.o(i.fun_setup_interrupt))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = fun_setup_interrupt &rArr; CountdownFlashDataHandle &rArr; __2printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDFlashing_1s
-<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_real_time
+<BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_real_time
+<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDFlashing_1s
 <LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TimerFlashDataHandle
 <LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CountdownFlashDataHandle
 </UL>
@@ -1739,13 +1739,13 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = get_check_sum
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rf_test
-<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;update_current_runtime
 <LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;update_calibrstatus
 <LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4TimerDataClear
 <LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4CountdownDataClear
 <LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_common_test_uart_data_unpack
 <LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;update_battery_value
 <LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_real_time
+<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;update_current_runtime
 <LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dismiss_bind
 </UL>
 
@@ -1774,8 +1774,8 @@ Global Symbols
 <P><STRONG><a name="[b3]"></a>get_real_time</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, tybn1_init.o(i.get_real_time))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = get_real_time &rArr; uart0_send
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart0_send
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_check_sum
+<BR>[Calls]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_check_sum
+<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart0_send
 </UL>
 <BR>[Called By]<UL><LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fun_setup_interrupt
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timing_task_program
@@ -1839,13 +1839,13 @@ Global Symbols
 <P><STRONG><a name="[ff]"></a>key_init</STRONG> (Thumb, 250 bytes, Stack size 32 bytes, gpio_init.o(i.key_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = key_init &rArr; AFIO_GPxConfig
 </UL>
-<BR>[Calls]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PullResistorConfig
+<BR>[Calls]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_IntConfig
+<LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Init
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PullResistorConfig
 <LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_InputConfig
 <LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_DirectionConfig
 <LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AFIO_GPxConfig
 <LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AFIO_EXTISourceConfig
-<LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_IntConfig
-<LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;low_power_consump_fun
@@ -1876,7 +1876,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[102]"></a>low_power_init</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, low_power_iniit.o(i.low_power_init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = low_power_init &rArr; Exit_Init &rArr; AFIO_GPxConfig
+<BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = low_power_init &rArr; Exit_Init &rArr; CKCU_PeripClockConfig
 </UL>
 <BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Exit_Init
 </UL>
@@ -1928,8 +1928,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_bt_uart_byte
 <LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_uart_write_frame
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_download_handle
-<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;all_data_update_fun
+<BR>[Called By]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;all_data_update_fun
+<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_download_handle
 <LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4_Timecallback
 </UL>
 
@@ -1939,10 +1939,10 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_bt_uart_byte
 <LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_uart_write_frame
 </UL>
-<BR>[Called By]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_curtain_control
-<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_download_handle
-<LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_download_control_handle
+<BR>[Called By]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_download_control_handle
 <LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;all_data_update_fun
+<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_curtain_control
+<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_download_handle
 <LI><a href="#[12a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;update_curtain_position
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LockedRotorDetection
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;motor_turn
@@ -1967,8 +1967,8 @@ Global Symbols
 <LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_bt_uart_buffer
 <LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_uart_write_frame
 </UL>
-<BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_curtain_timer_task
-<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;all_data_update_fun
+<BR>[Called By]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;all_data_update_fun
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_curtain_timer_task
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timing_task_program
 </UL>
 
@@ -1978,12 +1978,12 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_bt_uart_byte
 <LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_uart_write_frame
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pause_handler
+<BR>[Called By]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_download_control_handle
+<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;all_data_update_fun
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pause_handler
 <LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_curtain_control
 <LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_download_handle
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_download_curtain_countdown_time
-<LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_download_control_handle
-<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;all_data_update_fun
 <LI><a href="#[12a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;update_curtain_position
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;motor_turn
 <LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4CompleteHandler
@@ -2079,14 +2079,13 @@ Global Symbols
 <LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;motor_pwr
 </UL>
 <BR>[Called By]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4_ProductionTest
-<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_battery_level
-<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pause_handler
-<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_download_handle
 <LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_download_control_handle
 <LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;open_curtain
 <LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;close_curtain
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_test_uart_service
-<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ManualCalibraCallBack
+<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_battery_level
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pause_handler
+<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_download_handle
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_curtain_control_callback
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;low_power_consump_fun
 <LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LockedRotorMotorCallback
@@ -2098,6 +2097,7 @@ Global Symbols
 <LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4LaunchHandler
 <LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4CompleteHandler
 <LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4CalibraERRHander
+<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ManualCalibraCallBack
 </UL>
 
 <P><STRONG><a name="[8c]"></a>motor_turn</STRONG> (Thumb, 524 bytes, Stack size 24 bytes, tst_function.o(i.motor_turn))
@@ -2106,16 +2106,16 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_GetCounter
 <LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_WriteOutBits
 <LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ReadInBit
-<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pause_handler
-<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDFlashing_1s
-<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_curtain_control
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ms_delay_systick
 <LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;motor_stop
 <LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_value_update
 <LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_enum_update
 <LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;motor_pwr
-<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pause_handler
+<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDFlashing_1s
+<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_curtain_control
 <LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dismiss_bind
+<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4_MainTask
 </UL>
@@ -2181,7 +2181,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;product_info_update
 </UL>
 
-<P><STRONG><a name="[79]"></a>open_curtain</STRONG> (Thumb, 140 bytes, Stack size 8 bytes, motor_init.o(i.open_curtain))
+<P><STRONG><a name="[79]"></a>open_curtain</STRONG> (Thumb, 148 bytes, Stack size 8 bytes, motor_init.o(i.open_curtain))
 <BR><BR>[Stack]<UL><LI>Max Depth = 108<LI>Call Chain = open_curtain &rArr; motor_stop &rArr; PB3_PWM_INIT &rArr; __aeabi_idivmod &rArr; __aeabi_uidivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ms_delay_systick
@@ -2190,23 +2190,23 @@ Global Symbols
 <LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PB2_PWM_INIT
 <LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;motor_pwr
 </UL>
-<BR>[Called By]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_curtain_control
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_test_uart_service
-<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ManualCalibraCallBack
+<BR>[Called By]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_test_uart_service
+<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_curtain_control
 <LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LockedRotorMotorCallback
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4_LockedRotorCallback
 <LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4_FullInspection
 <LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4ReturnJourneyHandler
 <LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4LaunchHandler
 <LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4CompleteHandler
+<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ManualCalibraCallBack
 </UL>
 
 <P><STRONG><a name="[af]"></a>perc_Boundary_process</STRONG> (Thumb, 124 bytes, Stack size 24 bytes, tst_function.o(i.perc_Boundary_process))
 <BR><BR>[Stack]<UL><LI>Max Depth = 196<LI>Call Chain = perc_Boundary_process &rArr; timer_curtain_control &rArr; Pause_handler &rArr; LockedRotorMotorCallback &rArr; open_curtain &rArr; motor_stop &rArr; PB3_PWM_INIT &rArr; __aeabi_idivmod &rArr; __aeabi_uidivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_WriteOutBits
-<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_curtain_control
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ms_delay_systick
+<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_curtain_control
 <LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timing_task_program
@@ -2225,8 +2225,8 @@ Global Symbols
 <P><STRONG><a name="[d2]"></a>rf_test</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, head.o(i.rf_test))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = rf_test &rArr; uart0_send
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart0_send
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_check_sum
+<BR>[Calls]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_check_sum
+<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart0_send
 </UL>
 <BR>[Called By]<UL><LI><a href="#[20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_test_uart_service
@@ -2255,7 +2255,6 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bt_send_mcu_ver
-<LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;product_info_update
 <LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_ota_proc
 <LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;on_data_write_request_sched
 <LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_ota_offset_req
@@ -2263,15 +2262,16 @@ Global Symbols
 <LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_ota_data_req
 <LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;data_handle
 <LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_raw_update
+<LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;product_info_update
 </UL>
 
 <P><STRONG><a name="[fe]"></a>set_bt_uart_byte</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, system.o(i.set_bt_uart_byte))
-<BR><BR>[Called By]<UL><LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;heat_beat_check
-<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_value_update
+<BR><BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_value_update
 <LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_raw_update
 <LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_fault_update
 <LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_enum_update
 <LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_bool_update
+<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;heat_beat_check
 </UL>
 
 <P><STRONG><a name="[83]"></a>stop_fun</STRONG> (Thumb, 192 bytes, Stack size 24 bytes, tst_function.o(i.stop_fun))
@@ -2280,8 +2280,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;motor_stop
 <LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ManualCalibraCallBack
-<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4ReturnJourneyHandler
+<BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4ReturnJourneyHandler
+<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ManualCalibraCallBack
 </UL>
 
 <P><STRONG><a name="[10a]"></a>systick_init</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, systick_init.o(i.systick_init))
@@ -2298,32 +2298,32 @@ Global Symbols
 <P><STRONG><a name="[53]"></a>timer_curtain_control</STRONG> (Thumb, 290 bytes, Stack size 32 bytes, protocol.o(i.timer_curtain_control))
 <BR><BR>[Stack]<UL><LI>Max Depth = 172<LI>Call Chain = timer_curtain_control &rArr; Pause_handler &rArr; LockedRotorMotorCallback &rArr; open_curtain &rArr; motor_stop &rArr; PB3_PWM_INIT &rArr; __aeabi_idivmod &rArr; __aeabi_uidivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pause_handler
-<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;update_current_runtime
-<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4CourseDirection
-<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;open_curtain
+<BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;open_curtain
 <LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;close_curtain
 <LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_value_update
 <LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_enum_update
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pause_handler
+<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;update_current_runtime
+<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4CourseDirection
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_download_handle
-<LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_download_control_handle
-<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Common_timing_data_processing
+<BR>[Called By]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_download_control_handle
+<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_download_handle
 <LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;perc_Boundary_process
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;motor_turn
 <LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;alarm_perc_Boundary_process
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timing_task_program
+<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Common_timing_data_processing
 </UL>
 
-<P><STRONG><a name="[91]"></a>timer_curtain_control_callback</STRONG> (Thumb, 170 bytes, Stack size 16 bytes, head.o(i.timer_curtain_control_callback))
+<P><STRONG><a name="[91]"></a>timer_curtain_control_callback</STRONG> (Thumb, 172 bytes, Stack size 16 bytes, head.o(i.timer_curtain_control_callback))
 <BR><BR>[Stack]<UL><LI>Max Depth = 140<LI>Call Chain = timer_curtain_control_callback &rArr; I4_LockedRotorCallback &rArr; open_curtain &rArr; motor_stop &rArr; PB3_PWM_INIT &rArr; __aeabi_idivmod &rArr; __aeabi_uidivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;motor_stop
-<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 <LI><a href="#[12a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;update_curtain_position
 <LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;key_delay_process_start
 <LI><a href="#[12b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;key_delay_process_callback
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4_LockedRotorCallback
+<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4_MainTask
 </UL>
@@ -2352,8 +2352,8 @@ Global Symbols
 <P><STRONG><a name="[107]"></a>uart0_init</STRONG> (Thumb, 106 bytes, Stack size 24 bytes, uart0_init.o(i.uart0_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 92<LI>Call Chain = uart0_init &rArr; USART_Init &rArr; CKCU_GetPeripFrequency &rArr; CKCU_GetClocksFrequency &rArr; __aeabi_uidivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AFIO_GPxConfig
-<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CKCU_PeripClockConfig
+<BR>[Calls]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CKCU_PeripClockConfig
+<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AFIO_GPxConfig
 <LI><a href="#[12d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_TxRxCmd
 <LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_IntConfig
 <LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Init
@@ -2368,12 +2368,12 @@ Global Symbols
 <LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_GetFlagStatus
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rf_test
-<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;update_current_runtime
 <LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;update_calibrstatus
 <LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4TimerDataClear
 <LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4CountdownDataClear
 <LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;update_battery_value
 <LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_real_time
+<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;update_current_runtime
 <LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dismiss_bind
 </UL>
 
@@ -2404,8 +2404,8 @@ Global Symbols
 <P><STRONG><a name="[db]"></a>update_battery_value</STRONG> (Thumb, 62 bytes, Stack size 8 bytes, tst_function.o(i.update_battery_value))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = update_battery_value &rArr; uart0_send
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart0_send
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_check_sum
+<BR>[Calls]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_check_sum
+<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart0_send
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_battery_level
 </UL>
@@ -2413,8 +2413,8 @@ Global Symbols
 <P><STRONG><a name="[c4]"></a>update_calibrstatus</STRONG> (Thumb, 62 bytes, Stack size 8 bytes, head.o(i.update_calibrstatus))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = update_calibrstatus &rArr; uart0_send
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart0_send
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_check_sum
+<BR>[Calls]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_check_sum
+<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart0_send
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;all_data_update_fun
 </UL>
@@ -2422,8 +2422,8 @@ Global Symbols
 <P><STRONG><a name="[76]"></a>update_current_runtime</STRONG> (Thumb, 74 bytes, Stack size 8 bytes, protocol.o(i.update_current_runtime))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = update_current_runtime &rArr; uart0_send
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart0_send
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_check_sum
+<BR>[Calls]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_check_sum
+<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart0_send
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pause_handler
 <LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_curtain_control
@@ -2431,12 +2431,12 @@ Global Symbols
 <LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4CompleteHandler
 </UL>
 
-<P><STRONG><a name="[12a]"></a>update_curtain_position</STRONG> (Thumb, 76 bytes, Stack size 8 bytes, head.o(i.update_curtain_position))
+<P><STRONG><a name="[12a]"></a>update_curtain_position</STRONG> (Thumb, 74 bytes, Stack size 8 bytes, head.o(i.update_curtain_position))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = update_curtain_position &rArr; mcu_dp_value_update &rArr; bt_uart_write_frame &rArr; uart_transmit_output &rArr; uart_transmit_output_fun &rArr; ms_delay_systick
 </UL>
-<BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;update_current_runtime
-<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_value_update
+<BR>[Calls]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_value_update
 <LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_enum_update
+<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;update_current_runtime
 <LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Percentage_control
 </UL>
 <BR>[Called By]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_curtain_control_callback
@@ -2445,8 +2445,8 @@ Global Symbols
 <P><STRONG><a name="[108]"></a>usart0_init</STRONG> (Thumb, 108 bytes, Stack size 24 bytes, usart0_init.o(i.usart0_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 92<LI>Call Chain = usart0_init &rArr; USART_Init &rArr; CKCU_GetPeripFrequency &rArr; CKCU_GetClocksFrequency &rArr; __aeabi_uidivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AFIO_GPxConfig
-<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CKCU_PeripClockConfig
+<BR>[Calls]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CKCU_PeripClockConfig
+<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AFIO_GPxConfig
 <LI><a href="#[12d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_TxRxCmd
 <LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_IntConfig
 <LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Init
@@ -2586,12 +2586,12 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 196<LI>Call Chain = dp_download_control_handle &rArr; timer_curtain_control &rArr; Pause_handler &rArr; LockedRotorMotorCallback &rArr; open_curtain &rArr; motor_stop &rArr; PB3_PWM_INIT &rArr; __aeabi_idivmod &rArr; __aeabi_uidivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_WriteOutBits
-<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pause_handler
-<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_curtain_control
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ms_delay_systick
 <LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;motor_stop
 <LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_value_update
 <LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_enum_update
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pause_handler
+<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_curtain_control
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_download_handle
 </UL>
@@ -2625,10 +2625,10 @@ Local Symbols
 <BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;open_curtain
 <LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;motor_stop
 <LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;close_curtain
-<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 <LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stop_fun
 <LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4ReturnManualHandler
 <LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4CalibraERRHander
+<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;calibration_test
 </UL>

@@ -1003,7 +1003,7 @@ static void ManualCalibraCallBack(void)
 
 void I4LaunchHandler(void)
 {
-	 if (calibration_status == 1) //锟斤拷始校准
+	 if (calibration_status == 1) //start calibration
     {
 		KeyControl = FALSE;
 		//variable.auto_run_mode = 0;
@@ -1135,12 +1135,15 @@ void I4CompleteHandler(void)
 				}
 			}
 		}
-		printf("%d ==============================\r\n",variable.full_running_time);
+		
 		//将全关模式时间减去1s
-		variable.full_running_time -= 1400;
+		if(variable.full_running_time > 1000){
+			variable.full_running_time -= 1000;
+		}
+		
 		Calibra_erase_write();
-		printf("%d =reduce=============================\r\n",variable.full_running_time);
-		CalibraCallBack();//Update percentage status to 0 after calibration
+		
+
 		if(variable.full_running_time < 0){
 			variable.full_running_time = 0;
 		}
@@ -1150,7 +1153,7 @@ void I4CompleteHandler(void)
 
 		printf("qicheng = %d , return time = %d\r\n",variable.full_running_time,variable.returntime);
 		//I4_LOG("MUTE qicheng = %d , return time = %d\r\n",silenttime.Muteopentime, silenttime.Muteclosetime);
-		
+		CalibraCallBack();//Update percentage status to 0 after calibration
 		CalibrMotor = true;
        	
 		IsignLaunchDirection = 0;
