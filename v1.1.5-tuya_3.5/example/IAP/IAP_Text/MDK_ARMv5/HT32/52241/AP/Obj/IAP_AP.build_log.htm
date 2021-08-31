@@ -28,37 +28,21 @@ Project File Date:  05/27/2021
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\Keil_v5\ARM\ARMCC\Bin'
 Build Project 'Project_52241_AP' - Target 'AP'
 assembling iap.s...
-compiling tst_function.c...
-D:\github\curtain\v1.1.5-tuya_3.5\example\IAP\IAP_Text\Source\src\tst_function.c(192): warning:  #177-D: variable "runtime"  was declared but never referenced
-      float runtime = 0;
-D:\github\curtain\v1.1.5-tuya_3.5\example\IAP\IAP_Text\Source\src\tst_function.c(340): warning:  #177-D: variable "flag"  was declared but never referenced
-          u8 flag = 0;
-D:\github\curtain\v1.1.5-tuya_3.5\example\IAP\IAP_Text\Source\src\tst_function.c(584): warning:  #174-D: expression has no effect
-  			I4_LOG("stop\r\n");
-D:\github\curtain\v1.1.5-tuya_3.5\example\IAP\IAP_Text\Source\src\tst_function.c(903): warning:  #223-D: function "update_current_runtime" declared implicitly
-  	update_current_runtime(0);
-D:\github\curtain\v1.1.5-tuya_3.5\example\IAP\IAP_Text\Source\src\tst_function.c(940): warning:  #174-D: expression has no effect
-  			I4_LOG("open curtain %d\r\n ",curtain_mode);
-D:\github\curtain\v1.1.5-tuya_3.5\example\IAP\IAP_Text\Source\src\tst_function.c(950): warning:  #174-D: expression has no effect
-  			I4_LOG("close curtain =  %d\r\n",curtain_mode);
-D:\github\curtain\v1.1.5-tuya_3.5\example\IAP\IAP_Text\Source\src\tst_function.c(1057): warning:  #174-D: expression has no effect
-  				I4_LOG("maual run_state = %d\r\n",run_state);
-D:\github\curtain\v1.1.5-tuya_3.5\example\IAP\IAP_Text\Source\src\tst_function.c(1064): warning:  #174-D: expression has no effect
-  				I4_LOG("maual run_state = %d\r\n",run_state);
-D:\github\curtain\v1.1.5-tuya_3.5\example\IAP\IAP_Text\Source\src\tst_function.c(1084): warning:  #174-D: expression has no effect
-  			I4_LOG("ReturnJourney start open= %d\r\n",variable.full_running_time);
-D:\github\curtain\v1.1.5-tuya_3.5\example\IAP\IAP_Text\Source\src\tst_function.c(1089): warning:  #174-D: expression has no effect
-  			I4_LOG("ReturnJourney start close= %d\r\n",variable.full_running_time);
-D:\github\curtain\v1.1.5-tuya_3.5\example\IAP\IAP_Text\Source\src\tst_function.c(1147): warning:  #186-D: pointless comparison of unsigned integer with zero
-  		if(variable.full_running_time < 0){
-D:\github\curtain\v1.1.5-tuya_3.5\example\IAP\IAP_Text\Source\src\tst_function.c(1150): warning:  #186-D: pointless comparison of unsigned integer with zero
-  		if(variable.returntime < 0){
-..\Source\src\tst_function.c: 12 warnings, 0 errors
+compiling ht32f5xxxx_01_it.c...
+D:\github\curtain\v1.1.5-tuya_3.5\example\IAP\IAP_Text\Src_AP\ht32f5xxxx_01_it.c(609): warning:  #188-D: enumerated type mixed with another type
+  	EXTI_WakeupEventIntConfig(DISABLE);		// ENABLE DISABLE
+D:\github\curtain\v1.1.5-tuya_3.5\example\IAP\IAP_Text\Src_AP\ht32f5xxxx_01_it.c(650): warning:  #1-D: last line of file ends without a newline
+  }
+D:\github\curtain\v1.1.5-tuya_3.5\example\IAP\IAP_Text\Src_AP\ht32f5xxxx_01_it.c(448): warning:  #177-D: function "KEY1_Button_Process"  was declared but never referenced
+  __STATIC_INLINE void KEY1_Button_Process(void)
+D:\github\curtain\v1.1.5-tuya_3.5\example\IAP\IAP_Text\Src_AP\ht32f5xxxx_01_it.c(489): warning:  #177-D: function "KEY2_Button_Process"  was declared but never referenced
+  __STATIC_INLINE void KEY2_Button_Process(void)
+..\Src_AP\ht32f5xxxx_01_it.c: 4 warnings, 0 errors
 linking...
-Program Size: Code=23584 RO-data=2872 RW-data=336 ZI-data=4560  
+Program Size: Code=23612 RO-data=2872 RW-data=336 ZI-data=4560  
 FromELF: creating hex file...
 After Build - User command #1: fromelf --bin -o ".\HT32\52241\AP\Obj\IAP_AP.axf.bin" ".\HT32\52241\AP\Obj\IAP_AP.axf"
-".\HT32\52241\AP\Obj\IAP_AP.axf" - 0 Error(s), 12 Warning(s).
+".\HT32\52241\AP\Obj\IAP_AP.axf" - 0 Error(s), 4 Warning(s).
 
 <h2>Software Packages used:</h2>
 

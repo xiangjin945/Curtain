@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\HT32\52241\AP\Obj\IAP_AP.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\HT32\52241\AP\Obj\IAP_AP.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Tue Aug 31 15:50:55 2021
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Tue Aug 31 18:29:27 2021
 <BR><P>
 <H3>Maximum Stack Usage =        468 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -155,11 +155,11 @@ Global Symbols
 <P><STRONG><a name="[36]"></a>__aeabi_uidivmod</STRONG> (Thumb, 44 bytes, Stack size 12 bytes, uidiv.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = __aeabi_uidivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPTM0_IRQHandler
+<BR>[Called By]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CKCU_GetClocksFrequency
+<LI><a href="#[f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPTM0_IRQHandler
 <LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;systick_init
 <LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gptm0_onfiguration
 <LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bftm_onfiguration
-<LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CKCU_GetClocksFrequency
 <LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Init
 <LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;file_crc_check_in_flash
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pause_handler
@@ -562,43 +562,44 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_download_handle
 </UL>
 
-<P><STRONG><a name="[9]"></a>EVWUP_IRQHandler</STRONG> (Thumb, 80 bytes, Stack size 8 bytes, ht32f5xxxx_01_it.o(i.EVWUP_IRQHandler))
-<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = EVWUP_IRQHandler &rArr; tybn1_out_sleep_mode
+<P><STRONG><a name="[9]"></a>EVWUP_IRQHandler</STRONG> (Thumb, 86 bytes, Stack size 16 bytes, ht32f5xxxx_01_it.o(i.EVWUP_IRQHandler))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = EVWUP_IRQHandler &rArr; WAKEUP_Button_Process &rArr; __2printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tybn1_out_sleep_mode
-<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_GetCounter
-<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_WriteOutBits
-<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_WakeupEventIntConfig
-<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_ClearWakeupFlag
+<BR>[Calls]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tybn1_out_sleep_mode
+<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_GetCounter
+<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_WriteOutBits
+<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_WakeupEventIntConfig
+<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_ClearWakeupFlag
+<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WAKEUP_Button_Process
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_ht32f5xxxx_01.o(RESET)
 </UL>
 <P><STRONG><a name="[a]"></a>EXTI0_1_IRQHandler</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, ht32f5xxxx_01_it.o(i.EXTI0_1_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = EXTI0_1_IRQHandler &rArr; WAKEUP_Button_Process &rArr; __2printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WAKEUP_Button_Process
+<BR>[Calls]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WAKEUP_Button_Process
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_ht32f5xxxx_01.o(RESET)
 </UL>
 <P><STRONG><a name="[b]"></a>EXTI2_3_IRQHandler</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, ht32f5xxxx_01_it.o(i.EXTI2_3_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = EXTI2_3_IRQHandler &rArr; WAKEUP_Button_Process &rArr; __2printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WAKEUP_Button_Process
+<BR>[Calls]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WAKEUP_Button_Process
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_ht32f5xxxx_01.o(RESET)
 </UL>
 <P><STRONG><a name="[c]"></a>EXTI4_15_IRQHandler</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, ht32f5xxxx_01_it.o(i.EXTI4_15_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = EXTI4_15_IRQHandler &rArr; WAKEUP_Button_Process &rArr; __2printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WAKEUP_Button_Process
+<BR>[Calls]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WAKEUP_Button_Process
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_ht32f5xxxx_01.o(RESET)
 </UL>
 <P><STRONG><a name="[b9]"></a>EXTI_ClearEdgeFlag</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, ht32f5xxxx_exti.o(i.EXTI_ClearEdgeFlag))
-<BR><BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WAKEUP_Button_Process
+<BR><BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WAKEUP_Button_Process
 </UL>
 
-<P><STRONG><a name="[5f]"></a>EXTI_ClearWakeupFlag</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, ht32f5xxxx_exti.o(i.EXTI_ClearWakeupFlag))
+<P><STRONG><a name="[60]"></a>EXTI_ClearWakeupFlag</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, ht32f5xxxx_exti.o(i.EXTI_ClearWakeupFlag))
 <BR><BR>[Called By]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EVWUP_IRQHandler
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;low_power_consump_fun
 </UL>
@@ -606,7 +607,7 @@ Global Symbols
 <P><STRONG><a name="[b8]"></a>EXTI_GetEdgeStatus</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, ht32f5xxxx_exti.o(i.EXTI_GetEdgeStatus))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = EXTI_GetEdgeStatus
 </UL>
-<BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WAKEUP_Button_Process
+<BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WAKEUP_Button_Process
 </UL>
 
 <P><STRONG><a name="[100]"></a>EXTI_Init</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, ht32f5xxxx_exti.o(i.EXTI_Init))
@@ -623,7 +624,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Exit_Init
 </UL>
 
-<P><STRONG><a name="[5e]"></a>EXTI_WakeupEventIntConfig</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, ht32f5xxxx_exti.o(i.EXTI_WakeupEventIntConfig))
+<P><STRONG><a name="[5f]"></a>EXTI_WakeupEventIntConfig</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, ht32f5xxxx_exti.o(i.EXTI_WakeupEventIntConfig))
 <BR><BR>[Called By]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EVWUP_IRQHandler
 <LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Exit_Init
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;low_power_consump_fun
@@ -632,11 +633,11 @@ Global Symbols
 <P><STRONG><a name="[61]"></a>Exit_Init</STRONG> (Thumb, 390 bytes, Stack size 16 bytes, low_power_iniit.o(i.Exit_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = Exit_Init &rArr; CKCU_PeripClockConfig
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_WakeupEventIntConfig
-<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ReadInBit
-<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_WakeupEventConfig
+<BR>[Calls]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_WakeupEventConfig
 <LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CKCU_PeripClockConfig
 <LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RSTCU_PeripReset
+<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_WakeupEventIntConfig
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ReadInBit
 <LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PullResistorConfig
 <LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_InputConfig
 <LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AFIO_GPxConfig
@@ -726,8 +727,8 @@ Global Symbols
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;motor_turn
 </UL>
 
-<P><STRONG><a name="[5d]"></a>GPIO_WriteOutBits</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, ht32f5xxxx_gpio.o(i.GPIO_WriteOutBits))
-<BR><BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tybn1_out_sleep_mode
+<P><STRONG><a name="[5e]"></a>GPIO_WriteOutBits</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, ht32f5xxxx_gpio.o(i.GPIO_WriteOutBits))
+<BR><BR>[Called By]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tybn1_out_sleep_mode
 <LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LVD_BOD_IRQHandler
 <LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EVWUP_IRQHandler
 <LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_init
@@ -852,7 +853,7 @@ Global Symbols
 <P><STRONG><a name="[85]"></a>I4_FullInspection</STRONG> (Thumb, 180 bytes, Stack size 0 bytes, head.o(i.I4_FullInspection))
 <BR><BR>[Stack]<UL><LI>Max Depth = 108<LI>Call Chain = I4_FullInspection &rArr; open_curtain &rArr; motor_stop &rArr; PB3_PWM_INIT &rArr; __aeabi_idivmod &rArr; __aeabi_uidivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_WriteOutBits
+<BR>[Calls]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_WriteOutBits
 <LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ReadInBit
 <LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;open_curtain
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ms_delay_systick
@@ -866,7 +867,7 @@ Global Symbols
 <P><STRONG><a name="[87]"></a>I4_LEDHandler</STRONG> (Thumb, 92 bytes, Stack size 24 bytes, head.o(i.I4_LEDHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = I4_LEDHandler &rArr; NoNetworkLedFlashing
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_WriteOutBits
+<BR>[Calls]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_WriteOutBits
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NoNetworkLedFlashing
 <LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDFlashingCALLBack
 </UL>
@@ -876,7 +877,7 @@ Global Symbols
 <P><STRONG><a name="[86]"></a>I4_LedTwinkle</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, head.o(i.I4_LedTwinkle))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = I4_LedTwinkle &rArr; ms_delay_systick
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_WriteOutBits
+<BR>[Calls]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_WriteOutBits
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ms_delay_systick
 </UL>
 <BR>[Called By]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4_ProductionTest
@@ -941,7 +942,7 @@ Global Symbols
 <P><STRONG><a name="[88]"></a>LEDFlashingCALLBack</STRONG> (Thumb, 76 bytes, Stack size 16 bytes, head.o(i.LEDFlashingCALLBack))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = LEDFlashingCALLBack
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_WriteOutBits
+<BR>[Calls]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_WriteOutBits
 </UL>
 <BR>[Called By]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4_LEDHandler
 </UL>
@@ -949,7 +950,7 @@ Global Symbols
 <P><STRONG><a name="[9a]"></a>LEDFlashing_1s</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, head.o(i.LEDFlashing_1s))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LEDFlashing_1s
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_WriteOutBits
+<BR>[Calls]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_WriteOutBits
 </UL>
 <BR>[Called By]<UL><LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fun_setup_interrupt
 <LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_download_handle
@@ -961,7 +962,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = LVD_BOD_IRQHandler &rArr; __2printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWRCU_GetLVDFlagStatus
-<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_WriteOutBits
+<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_WriteOutBits
 <LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_ht32f5xxxx_01.o(RESET)
@@ -1002,7 +1003,7 @@ Global Symbols
 <P><STRONG><a name="[89]"></a>NoNetworkLedFlashing</STRONG> (Thumb, 92 bytes, Stack size 24 bytes, head.o(i.NoNetworkLedFlashing))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = NoNetworkLedFlashing
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_WriteOutBits
+<BR>[Calls]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_WriteOutBits
 </UL>
 <BR>[Called By]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4_LEDHandler
 </UL>
@@ -1026,8 +1027,8 @@ Global Symbols
 <P><STRONG><a name="[a4]"></a>PB3_PWM_INIT</STRONG> (Thumb, 128 bytes, Stack size 64 bytes, motor_init.o(i.PB3_PWM_INIT))
 <BR><BR>[Stack]<UL><LI>Max Depth = 92<LI>Call Chain = PB3_PWM_INIT &rArr; __aeabi_idivmod &rArr; __aeabi_uidivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TM_ClearFlag
-<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CKCU_PeripClockConfig
+<BR>[Calls]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CKCU_PeripClockConfig
+<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TM_ClearFlag
 <LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AFIO_GPxConfig
 <LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TM_TimeBaseInit
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TM_OutputInit
@@ -1135,9 +1136,9 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtc_init
 </UL>
 
-<P><STRONG><a name="[5b]"></a>RTC_GetCounter</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, ht32f5xxxx_rtc.o(i.RTC_GetCounter))
+<P><STRONG><a name="[5c]"></a>RTC_GetCounter</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, ht32f5xxxx_rtc.o(i.RTC_GetCounter))
 <BR><BR>[Called By]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EVWUP_IRQHandler
-<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WAKEUP_Button_Process
+<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WAKEUP_Button_Process
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_download_curtain_countdown_time
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_curtain_timer_task
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;low_power_consump_fun
@@ -1268,9 +1269,9 @@ Global Symbols
 <P><STRONG><a name="[8f]"></a>Timing_task_program</STRONG> (Thumb, 540 bytes, Stack size 24 bytes, tst_function.o(i.Timing_task_program))
 <BR><BR>[Stack]<UL><LI>Max Depth = 220<LI>Call Chain = Timing_task_program &rArr; perc_Boundary_process &rArr; timer_curtain_control &rArr; Pause_handler &rArr; LockedRotorMotorCallback &rArr; open_curtain &rArr; motor_stop &rArr; PB3_PWM_INIT &rArr; __aeabi_idivmod &rArr; __aeabi_uidivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_GetCounter
-<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_ProgramWordData
+<BR>[Calls]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_ProgramWordData
 <LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_ErasePage
+<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_GetCounter
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_SetCompare
 <LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_raw_update
 <LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_real_time
@@ -1366,7 +1367,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LVD_BOD_IRQHandler
-<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WAKEUP_Button_Process
+<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WAKEUP_Button_Process
 <LI><a href="#[20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;all_data_update_fun
 <LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;data_handle
@@ -1377,6 +1378,7 @@ Global Symbols
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_download_curtain_countdown_time
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dp_curtain_timer_task
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_curtain_control_callback
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;low_power_consump_fun
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LockedRotorDetection
 <LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CountdownFlashDataHandle
 <LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stop_fun
@@ -1426,7 +1428,7 @@ Global Symbols
 <P><STRONG><a name="[b1]"></a>alarm_perc_Boundary_process</STRONG> (Thumb, 130 bytes, Stack size 24 bytes, tst_function.o(i.alarm_perc_Boundary_process))
 <BR><BR>[Stack]<UL><LI>Max Depth = 196<LI>Call Chain = alarm_perc_Boundary_process &rArr; timer_curtain_control &rArr; Pause_handler &rArr; LockedRotorMotorCallback &rArr; open_curtain &rArr; motor_stop &rArr; PB3_PWM_INIT &rArr; __aeabi_idivmod &rArr; __aeabi_uidivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_WriteOutBits
+<BR>[Calls]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_WriteOutBits
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ms_delay_systick
 <LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_curtain_control
 </UL>
@@ -1498,11 +1500,11 @@ Global Symbols
 <P><STRONG><a name="[95]"></a>bt_test_uart_service</STRONG> (Thumb, 270 bytes, Stack size 40 bytes, mcu_api.o(i.bt_test_uart_service))
 <BR><BR>[Stack]<UL><LI>Max Depth = 148<LI>Call Chain = bt_test_uart_service &rArr; open_curtain &rArr; motor_stop &rArr; PB3_PWM_INIT &rArr; __aeabi_idivmod &rArr; __aeabi_uidivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_WriteOutBits
-<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rf_test
-<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_ProgramWordData
+<BR>[Calls]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_ProgramWordData
 <LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_ErasePage
 <LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8
+<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_WriteOutBits
+<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rf_test
 <LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;open_curtain
 <LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;motor_stop
 <LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;close_curtain
@@ -1617,10 +1619,10 @@ Global Symbols
 <P><STRONG><a name="[d6]"></a>data_handle</STRONG> (Thumb, 710 bytes, Stack size 64 bytes, system.o(i.data_handle))
 <BR><BR>[Stack]<UL><LI>Max Depth = 444<LI>Call Chain = data_handle &rArr; mcu_ota_proc &rArr; mcu_ota_data_req &rArr; mcu_ota_init_disconnect &rArr; mcu_flash_write &rArr; FLASH_ProgramWordData &rArr; FLASH_WaitForOperationEnd
 </UL>
-<BR>[Calls]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_SendData
-<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_WriteOutBits
-<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_ErasePage
+<BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_ErasePage
 <LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8
+<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_SendData
+<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_WriteOutBits
 <LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;all_data_update_fun
 <LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_ota_proc
 <LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_ota_init_disconnect
@@ -1661,9 +1663,9 @@ Global Symbols
 <P><STRONG><a name="[97]"></a>dp_curtain_timer_task</STRONG> (Thumb, 522 bytes, Stack size 32 bytes, protocol.o(i.dp_curtain_timer_task))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = dp_curtain_timer_task &rArr; mcu_dp_raw_update &rArr; bt_uart_write_frame &rArr; uart_transmit_output &rArr; uart_transmit_output_fun &rArr; ms_delay_systick
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_GetCounter
-<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_ProgramWordData
+<BR>[Calls]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_ProgramWordData
 <LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_ErasePage
+<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_GetCounter
 <LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_raw_update
 <LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 <LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
@@ -1678,9 +1680,9 @@ Global Symbols
 <P><STRONG><a name="[99]"></a>dp_download_curtain_countdown_time</STRONG> (Thumb, 368 bytes, Stack size 280 bytes, protocol.o(i.dp_download_curtain_countdown_time))
 <BR><BR>[Stack]<UL><LI>Max Depth = 336<LI>Call Chain = dp_download_curtain_countdown_time &rArr; mcu_dp_value_update &rArr; bt_uart_write_frame &rArr; uart_transmit_output &rArr; uart_transmit_output_fun &rArr; ms_delay_systick
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_GetCounter
-<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_ProgramWordData
+<BR>[Calls]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_ProgramWordData
 <LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FLASH_ErasePage
+<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_GetCounter
 <LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_value_update
 <LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 <LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
@@ -1793,7 +1795,7 @@ Global Symbols
 <P><STRONG><a name="[f8]"></a>gpio_init</STRONG> (Thumb, 358 bytes, Stack size 24 bytes, gpio_init.o(i.gpio_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 60<LI>Call Chain = gpio_init &rArr; i4_GPIO_PIN_SET &rArr; AFIO_GPxConfig
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_WriteOutBits
+<BR>[Calls]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_WriteOutBits
 <LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PullResistorConfig
 <LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_InputConfig
 <LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_DriveConfig
@@ -1808,8 +1810,8 @@ Global Symbols
 <P><STRONG><a name="[fc]"></a>gptm0_onfiguration</STRONG> (Thumb, 90 bytes, Stack size 32 bytes, gptm0_init.o(i.gptm0_onfiguration))
 <BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = gptm0_onfiguration &rArr; CKCU_PeripClockConfig
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TM_ClearFlag
-<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CKCU_PeripClockConfig
+<BR>[Calls]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CKCU_PeripClockConfig
+<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TM_ClearFlag
 <LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TM_TimeBaseInit
 <LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TM_IntConfig
 <LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TM_Cmd
@@ -1855,21 +1857,22 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[90]"></a>low_power_consump_fun</STRONG> (Thumb, 174 bytes, Stack size 16 bytes, head.o(i.low_power_consump_fun))
+<P><STRONG><a name="[90]"></a>low_power_consump_fun</STRONG> (Thumb, 180 bytes, Stack size 16 bytes, head.o(i.low_power_consump_fun))
 <BR><BR>[Stack]<UL><LI>Max Depth = 116<LI>Call Chain = low_power_consump_fun &rArr; motor_stop &rArr; PB3_PWM_INIT &rArr; __aeabi_idivmod &rArr; __aeabi_uidivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_GetCounter
-<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_WriteOutBits
-<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_WakeupEventIntConfig
-<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_ClearWakeupFlag
+<BR>[Calls]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Cmd
+<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_GetCounter
+<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_WriteOutBits
+<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_WakeupEventIntConfig
+<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_ClearWakeupFlag
 <LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;key_init
 <LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;adc_init
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Cmd
 <LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWRCU_DeepSleep2
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TM_DeInit
 <LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;motor_stop
 <LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;low_power_init
 <LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tybn1_join_sleep_mode
+<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4_ProductionTest
 <LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I4_MainTask
@@ -2062,7 +2065,7 @@ Global Symbols
 <P><STRONG><a name="[dd]"></a>motor_pwr</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, motor_init.o(i.motor_pwr))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = motor_pwr
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_WriteOutBits
+<BR>[Calls]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_WriteOutBits
 </UL>
 <BR>[Called By]<UL><LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gpio_init
 <LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;open_curtain
@@ -2103,8 +2106,8 @@ Global Symbols
 <P><STRONG><a name="[8c]"></a>motor_turn</STRONG> (Thumb, 524 bytes, Stack size 24 bytes, tst_function.o(i.motor_turn))
 <BR><BR>[Stack]<UL><LI>Max Depth = 196<LI>Call Chain = motor_turn &rArr; timer_curtain_control &rArr; Pause_handler &rArr; LockedRotorMotorCallback &rArr; open_curtain &rArr; motor_stop &rArr; PB3_PWM_INIT &rArr; __aeabi_idivmod &rArr; __aeabi_uidivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_GetCounter
-<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_WriteOutBits
+<BR>[Calls]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_GetCounter
+<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_WriteOutBits
 <LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ReadInBit
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ms_delay_systick
 <LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;motor_stop
@@ -2204,7 +2207,7 @@ Global Symbols
 <P><STRONG><a name="[af]"></a>perc_Boundary_process</STRONG> (Thumb, 124 bytes, Stack size 24 bytes, tst_function.o(i.perc_Boundary_process))
 <BR><BR>[Stack]<UL><LI>Max Depth = 196<LI>Call Chain = perc_Boundary_process &rArr; timer_curtain_control &rArr; Pause_handler &rArr; LockedRotorMotorCallback &rArr; open_curtain &rArr; motor_stop &rArr; PB3_PWM_INIT &rArr; __aeabi_idivmod &rArr; __aeabi_uidivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_WriteOutBits
+<BR>[Calls]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_WriteOutBits
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ms_delay_systick
 <LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer_curtain_control
 <LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
@@ -2335,16 +2338,16 @@ Global Symbols
 <P><STRONG><a name="[103]"></a>tybn1_join_sleep_mode</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, tybn1_init.o(i.tybn1_join_sleep_mode))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = tybn1_join_sleep_mode &rArr; ms_delay_systick
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_WriteOutBits
+<BR>[Calls]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_WriteOutBits
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ms_delay_systick
 </UL>
 <BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;low_power_consump_fun
 </UL>
 
-<P><STRONG><a name="[5c]"></a>tybn1_out_sleep_mode</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, protocol.o(i.tybn1_out_sleep_mode))
+<P><STRONG><a name="[5d]"></a>tybn1_out_sleep_mode</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, protocol.o(i.tybn1_out_sleep_mode))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = tybn1_out_sleep_mode
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_WriteOutBits
+<BR>[Calls]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_WriteOutBits
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EVWUP_IRQHandler
 </UL>
@@ -2472,10 +2475,10 @@ Global Symbols
 <H3>
 Local Symbols
 </H3>
-<P><STRONG><a name="[60]"></a>WAKEUP_Button_Process</STRONG> (Thumb, 286 bytes, Stack size 24 bytes, ht32f5xxxx_01_it.o(i.WAKEUP_Button_Process))
+<P><STRONG><a name="[5b]"></a>WAKEUP_Button_Process</STRONG> (Thumb, 286 bytes, Stack size 24 bytes, ht32f5xxxx_01_it.o(i.WAKEUP_Button_Process))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = WAKEUP_Button_Process &rArr; __2printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_GetCounter
+<BR>[Calls]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_GetCounter
 <LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_GetEdgeStatus
 <LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_ClearEdgeFlag
 <LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
@@ -2483,6 +2486,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI4_15_IRQHandler
 <LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI2_3_IRQHandler
 <LI><a href="#[a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI0_1_IRQHandler
+<LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EVWUP_IRQHandler
 </UL>
 
 <P><STRONG><a name="[1d]"></a>BootProcess</STRONG> (Thumb, 94 bytes, Stack size 0 bytes, startup_ht32f5xxxx_01.o(RESET))
@@ -2585,7 +2589,7 @@ Local Symbols
 <P><STRONG><a name="[ed]"></a>dp_download_control_handle</STRONG> (Thumb, 174 bytes, Stack size 24 bytes, protocol.o(i.dp_download_control_handle))
 <BR><BR>[Stack]<UL><LI>Max Depth = 196<LI>Call Chain = dp_download_control_handle &rArr; timer_curtain_control &rArr; Pause_handler &rArr; LockedRotorMotorCallback &rArr; open_curtain &rArr; motor_stop &rArr; PB3_PWM_INIT &rArr; __aeabi_idivmod &rArr; __aeabi_uidivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_WriteOutBits
+<BR>[Calls]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_WriteOutBits
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ms_delay_systick
 <LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;motor_stop
 <LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mcu_dp_value_update

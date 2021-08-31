@@ -588,6 +588,7 @@ void EVWUP_IRQHandler(void)
 	gptm0_4low = 0;
 	if(low_power_event_flag == 1)
 	{	
+		WAKEUP_Button_Process();
 		xRtcCounterTmp = 1;
 		// //notesxRtcCounterTmp%d\n",xRtcCounterTmp);
 		low_power_event_flag = 0;
