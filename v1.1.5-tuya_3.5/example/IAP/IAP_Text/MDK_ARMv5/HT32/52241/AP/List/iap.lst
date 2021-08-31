@@ -1,0 +1,1284 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         ;*******************************************************
+                       *************************
+    2 00000000         ;* @file        iap.s
+    3 00000000         ;* @version     $Rev:: 4102         $
+    4 00000000         ;* @date        $Date:: 2019-07-18 #$
+    5 00000000         ;* @brief       Include IAP image
+    6 00000000         ;*
+    7 00000000         ;* @note        Copyright (C) Holtek Semiconductor Inc. 
+                       All rights reserved.
+    8 00000000         ;*
+    9 00000000         ;* <h2><center>&copy; COPYRIGHT Holtek</center></h2>
+   10 00000000         ;*
+   11 00000000         ;*******************************************************
+                       *************************
+   12 00000000         ;*----------- <<< Use Configuration Wizard in Context Me
+                       nu >>> ------------------
+   13 00000000         ;*******************************************************
+                       *************************
+   14 00000000         
+   15 00000000 00000001 
+                       HT32F52220_30
+                               EQU              1
+   16 00000000 00000002 
+                       HT32F52231_41
+                               EQU              2
+   17 00000000 00000003 
+                       HT32F52331_41
+                               EQU              3
+   18 00000000 00000004 
+                       HT32F52342_52
+                               EQU              4
+   19 00000000 00000005 
+                       HT32F52243_53
+                               EQU              5
+   20 00000000 00000006 
+                       HT32F0008
+                               EQU              6
+   21 00000000 00000007 
+                       HT32F50220_30
+                               EQU              7
+   22 00000000 00000008 
+                       HT32F50231_41
+                               EQU              8
+   23 00000000 00000009 
+                       HT32F52344_54
+                               EQU              9
+   24 00000000 0000000A 
+                       HT32F0006
+                               EQU              10
+   25 00000000 0000000B 
+                       HT32F52357_67
+                               EQU              11
+   26 00000000 0000000D 
+                       HT32F57331_41
+                               EQU              13
+   27 00000000 0000000E 
+                       HT32F57342_52
+                               EQU              14
+   28 00000000 0000000F 
+
+
+
+ARM Macro Assembler    Page 2 
+
+
+                       HT32F50343
+                               EQU              15
+   29 00000000         
+   30 00000000         ;// <q> Include IAP image into user's application
+   31 00000000 00000001 
+                       INCLUDE_IAP
+                               EQU              1
+   32 00000000         
+   33 00000000                 AREA             IAP, DATA, READONLY
+   34 00000000         
+   35 00000000                 IF               (USE_HT32_CHIP=HT32F52220_30)
+   37                          ENDIF
+   38 00000000         
+   39 00000000                 IF               (USE_HT32_CHIP=HT32F52231_41)
+   40 00000000 20 08 00 
+              20 AD 00 
+              00 00 17 
+              01 00 00 
+              11 04 00 
+              00 FF FF 
+              FF FF FF 
+              FF FF FF 
+              FF FF FF 
+              FF FF FF 
+              FF FF FF 
+              FF FF FF 
+              FF FF FF 
+              FF FF FF 
+              FF FF 1B 
+              01 00 00 
+              FF FF FF 
+              FF FF FF 
+              FF FF 1D 
+              01 00 00 
+              1F 01 00 
+              00 03 48 
+              85 46 00 
+              F0 94 F8 
+              00 48 00 
+              47 71 08 
+              00 00 20 
+              08 00 20 
+              01 68 8D 
+              46 41 68 
+              08 47 30 
+              B5 0B 46 
+              01 46 00 
+              20 20 22 
+              01 24 09 
+              E0 0D 46 
+              D5 40 9D 
+              42 05 D3 
+              1D 46 95 
+              40 49 1B 
+              25 46 95 
+              40 40 19 
+              15 46 52 
+              1E 00 2D 
+              F1 DC 30 
+
+
+
+ARM Macro Assembler    Page 3 
+
+
+              BD 10 B5 
+              09 21 03 
+              20 00 22 
+              C9 02 00 
+              04 01 23 
+              00 F0 17 
+              F9 10 BD 
+              00 69 08 
+              40 00 D0 
+              01 20 70 
+              47 70 47 
+              ED 06 00 
+              00 1C 48 
+              80 47 1C 
+              48 80 47 
+              1C 48 00 
+              47 1C 48 
+              01 69 00 
+              29 08 D1 
+              41 69 00 
+              29 05 D1 
+              81 69 00 
+              29 02 D1 
+              C1 69 00 
+              29 09 D0 
+              17 48 C1 
+              68 09 01 
+              09 0D 00 
+              29 0E D0 
+              05 29 0C 
+              D0 06 29 
+              0A D0 BF 
+              F3 4F 8F 
+              12 48 12 
+              49 01 60 
+              12 49 11 
+              48 C8 60 
+              BF F3 4F 
+              8F FE E7 
+              0D 48 01 
+              68 0D 48 
+              88 42 00 
+              D0 70 47 
+              0D 48 0E 
+              49 01 60 
+              09 48 0D 
+              49 01 60 
+              70 47 FE 
+              E7 FE E7 
+              FE E7 FE 
+              E7 FE E7 
+              B9 00 00 
+              00 2D 05 
+              00 00 41 
+              00 00 00 
+              00 03 08 
+              40 80 01 
+              08 40 00 
+              00 00 20 
+
+
+
+ARM Macro Assembler    Page 4 
+
+
+              04 00 FA 
+              05 00 ED 
+              00 E0 00 
+              81 08 40 
+              01 00 00 
+              00 00 00 
+              00 00 03 
+              46 0B 43 
+              9B 07 03 
+              D0 09 E0 
+              08 C9 12 
+              1F 08 C0 
+              04 2A FA 
+              D2 03 E0 
+              0B 78 03 
+              70 40 1C 
+              49 1C 52 
+              1E F9 D2 
+              70 47 06 
+              4C 01 25 
+              06 4E 05 
+              E0 E3 68 
+              07 CC 2B 
+              43 0C 3C 
+              98 47 10 
+              34 B4 42 
+              F7 D3 FF 
+              F7 5E FF 
+              4C 0A 00 
+              00 6C 0A 
+              00 00 F0 
+              B5 96 46 
+              0A 46 13 
+              49 C0 00 
+              46 18 00 
+              23 00 25 
+              FF 20 98 
+              40 2C 46 
+              10 42 16 
+              D0 00 20 
+              01 21 99 
+              40 8C 46 
+              11 46 C1 
+              40 67 46 
+              39 42 06 
+              D0 87 00 
+              0F 21 B9 
+              40 0D 43 
+              71 46 B9 
+              40 0C 43 
+              40 1C 08 
+              28 F0 D3 
+              30 68 A8 
+              43 20 43 
+              30 60 08 
+              33 36 1D 
+              08 2B DE 
+              DD F0 BD 
+              00 00 20 
+
+
+
+ARM Macro Assembler    Page 5 
+
+
+              20 02 40 
+              70 B5 18 
+              4D 04 46 
+              68 6B 46 
+              07 76 0F 
+              00 F0 2E 
+              F8 15 49 
+              20 60 33 
+              00 00 F0 
+              B7 FA 08 
+              14 05 07 
+              07 14 14 
+              0E 11 14 
+              60 60 00 
+              E0 61 60 
+              29 6A 60 
+              68 05 29 
+              09 D3 40 
+              09 08 E0 
+              01 20 C0 
+              03 F3 E7 
+              7D 20 00 
+              02 F0 E7 
+              00 20 EE 
+              E7 C8 40 
+              A0 60 A9 
+              6A 49 03 
+              49 0F 07 
+              29 02 D0 
+              C8 40 E0 
+              60 70 BD 
+              03 21 FF 
+              F7 08 FF 
+              F9 E7 00 
+              00 00 80 
+              08 40 00 
+              12 7A 00 
+              0C 49 08 
+              68 C8 69 
+              C2 0F 48 
+              68 40 0A 
+              C0 07 C0 
+              0F 0E D0 
+              09 48 00 
+              2A 0B D1 
+              88 69 C0 
+              0D 00 07 
+              00 0F 00 
+              D1 10 20 
+              89 69 04 
+              4A 49 02 
+              89 0F 50 
+              43 C8 40 
+              70 47 00 
+              00 00 80 
+              08 40 00 
+              12 7A 00 
+              1F B5 41 
+              09 0A 4A 
+
+
+
+ARM Macro Assembler    Page 6 
+
+
+              89 00 8A 
+              18 00 21 
+              2E 28 00 
+              D1 02 21 
+              C0 06 C0 
+              0E 12 68 
+              03 23 83 
+              40 1A 40 
+              C2 40 54 
+              18 68 46 
+              FF F7 98 
+              FF 02 98 
+              04 B0 E0 
+              40 10 BD 
+              38 80 08 
+              40 F0 B5 
+              08 4F 7C 
+              6A FD 6A 
+              3E 6B 84 
+              43 8D 43 
+              96 43 00 
+              2B 02 D0 
+              04 43 0D 
+              43 16 43 
+              7C 62 FD 
+              62 3E 63 
+              F0 BD 00 
+              00 00 80 
+              08 40 F7 
+              B5 82 B0 
+              15 46 00 
+              28 08 D0 
+              00 21 00 
+              91 C8 21 
+              FF F7 AC 
+              FE 06 46 
+              0F 46 00 
+              24 0F E0 
+              01 20 05 
+              B0 F0 BD 
+              C8 22 10 
+              49 28 46 
+              00 F0 1C 
+              FB 6A 46 
+              C8 21 0D 
+              48 00 F0 
+              51 FA 64 
+              1C C8 35 
+              00 90 B4 
+              42 F0 D3 
+              78 1E C7 
+              28 0A D2 
+              3A 46 07 
+              49 28 46 
+              00 F0 0A 
+              FB 6A 46 
+              39 46 04 
+              48 00 F0 
+              3F FA 00 
+
+
+
+ARM Macro Assembler    Page 7 
+
+
+              90 03 98 
+              00 99 01 
+              60 00 20 
+              DB E7 00 
+              00 38 04 
+              00 20 00 
+              B5 04 49 
+              08 60 08 
+              20 C8 60 
+              14 20 08 
+              61 00 F0 
+              29 F8 00 
+              BD 00 00 
+              08 40 10 
+              B5 0A 4B 
+              03 21 8A 
+              00 D4 18 
+              24 6A E4 
+              43 84 50 
+              49 1E F8 
+              D5 19 6B 
+              C9 07 C9 
+              17 49 1C 
+              01 61 19 
+              6B 89 07 
+              C9 17 49 
+              1C 41 61 
+              10 BD 00 
+              00 00 00 
+              08 40 00 
+              B5 05 4A 
+              10 60 51 
+              60 04 20 
+              D0 60 14 
+              20 10 61 
+              00 F0 04 
+              F8 00 BD 
+              00 00 00 
+              00 08 40 
+              10 B5 12 
+              49 10 48 
+              4A 69 02 
+              23 1A 43 
+              4A 61 14 
+              22 0A 61 
+              04 E0 0A 
+              69 12 07 
+              92 0F 03 
+              2A 01 D0 
+              40 1E F8 
+              D2 8A 69 
+              8C 69 9C 
+              43 8C 61 
+              91 03 01 
+              D5 02 20 
+              10 BD 91 
+              07 01 D5 
+              01 20 10 
+              BD 00 28 
+
+
+
+ARM Macro Assembler    Page 8 
+
+
+              01 D0 00 
+              20 10 BD 
+              03 20 10 
+              BD 00 00 
+              FF FF 0F 
+              00 00 00 
+              08 40 02 
+              48 01 68 
+              00 29 FC 
+              D0 70 47 
+              00 00 18 
+              00 00 20 
+              10 B5 01 
+              24 24 03 
+              20 68 07 
+              21 49 07 
+              40 18 0B 
+              49 88 42 
+              12 D2 60 
+              68 3B 21 
+              00 1B 89 
+              02 88 42 
+              0C D2 07 
+              49 A0 03 
+              08 60 07 
+              48 00 F0 
+              EA F8 21 
+              46 00 20 
+              00 F0 4E 
+              F8 20 46 
+              FF F7 FD 
+              FD 10 BD 
+              01 20 00 
+              00 80 E1 
+              00 E0 00 
+              10 04 40 
+              FF B5 04 
+              46 81 B0 
+              02 98 17 
+              46 22 18 
+              26 46 07 
+              20 C7 36 
+              00 03 25 
+              46 84 42 
+              01 D1 01 
+              23 00 E0 
+              00 23 29 
+              46 08 20 
+              00 F0 42 
+              F9 4F 28 
+              13 D0 0B 
+              E0 C8 22 
+              10 49 38 
+              46 00 F0 
+              40 FA C8 
+              22 0E 49 
+              20 46 00 
+              F0 63 FA 
+              4F 28 02 
+
+
+
+ARM Macro Assembler    Page 9 
+
+
+              D0 46 20 
+              05 B0 F0 
+              BD 75 1C 
+              C9 36 C8 
+              34 C8 37 
+              07 20 00 
+              03 85 42 
+              E8 D9 02 
+              46 69 46 
+              02 98 FF 
+              F7 11 FF 
+              00 99 04 
+              98 81 42 
+              EC D1 4F 
+              20 EA E7 
+              00 00 51 
+              05 00 20 
+              01 20 02 
+              49 80 06 
+              08 60 70 
+              47 00 00 
+              00 E1 00 
+              E0 02 4A 
+              11 40 01 
+              43 02 48 
+              81 60 70 
+              47 80 FF 
+              FF 1F 00 
+              ED 00 E0 
+              F0 B5 08 
+              4F 7C 68 
+              BD 68 FE 
+              68 84 43 
+              8D 43 96 
+              43 00 2B 
+              02 D0 04 
+              43 0D 43 
+              16 43 7C 
+              60 BD 60 
+              FE 60 F0 
+              BD 00 00 
+              00 81 08 
+              40 F0 B5 
+              37 49 10 
+              20 C8 60 
+              36 4E 01 
+              20 30 60 
+              36 49 08 
+              6B 40 25 
+              28 43 08 
+              63 34 48 
+              00 23 44 
+              15 82 68 
+              27 2A FC 
+              D1 00 E0 
+              44 60 42 
+              68 92 05 
+              FB D5 00 
+              E0 43 60 
+
+
+
+ARM Macro Assembler    Page 10 
+
+
+              42 68 92 
+              05 FB D4 
+              33 60 48 
+              6A 03 22 
+              92 02 90 
+              43 48 62 
+              48 68 01 
+              22 D2 02 
+              10 43 48 
+              60 88 68 
+              C0 08 C0 
+              07 FB D0 
+              48 68 C0 
+              08 C0 00 
+              C0 1C 48 
+              60 48 6B 
+              40 07 40 
+              0F 03 28 
+              FA D1 21 
+              4A 10 68 
+              C0 08 C0 
+              00 40 1C 
+              10 60 0B 
+              62 48 68 
+              A0 43 48 
+              60 08 68 
+              96 15 30 
+              43 08 60 
+              48 68 17 
+              15 38 43 
+              48 60 88 
+              68 80 08 
+              C0 07 FB 
+              D0 08 6B 
+              A8 43 08 
+              63 08 68 
+              B0 43 08 
+              60 05 20 
+              C0 05 88 
+              61 48 68 
+              20 43 48 
+              60 88 68 
+              40 08 C0 
+              07 FB D0 
+              10 68 C0 
+              08 C0 00 
+              80 1C 10 
+              60 0B 62 
+              48 68 C0 
+              08 C0 00 
+              40 1C 48 
+              60 48 6B 
+              40 07 40 
+              0F 01 28 
+              FA D1 11 
+              68 10 20 
+              01 43 11 
+              60 F0 BD 
+              00 81 08 
+
+
+
+ARM Macro Assembler    Page 11 
+
+
+              40 00 83 
+              08 40 00 
+              80 08 40 
+              00 A1 06 
+              40 00 02 
+              08 40 00 
+              21 01 23 
+              10 B5 9B 
+              07 0A 46 
+              98 42 00 
+              D1 81 15 
+              07 4B 98 
+              42 01 D1 
+              03 15 19 
+              43 06 4B 
+              98 42 01 
+              D1 C0 14 
+              01 43 01 
+              23 10 46 
+              FF F7 5C 
+              FF 10 BD 
+              00 00 00 
+              10 00 40 
+              00 10 04 
+              40 70 B5 
+              04 46 0D 
+              46 C8 88 
+              89 88 62 
+              68 08 43 
+              29 89 13 
+              4B 1A 40 
+              11 43 08 
+              43 69 89 
+              08 43 60 
+              60 01 20 
+              80 07 84 
+              42 06 D1 
+              18 20 FF 
+              F7 08 FE 
+              29 68 FF 
+              F7 E9 FC 
+              60 62 0B 
+              48 84 42 
+              06 D1 1C 
+              20 FF F7 
+              FE FD 29 
+              68 FF F7 
+              DF FC 60 
+              62 07 48 
+              84 42 06 
+              D1 1E 20 
+              FF F7 F4 
+              FD 29 68 
+              FF F7 D5 
+              FC 60 62 
+              70 BD 00 
+              00 FC E0 
+              FF FF 00 
+              10 00 40 
+
+
+
+ARM Macro Assembler    Page 12 
+
+
+              00 10 04 
+              40 00 2A 
+              C2 68 01 
+              D0 0A 43 
+              00 E0 8A 
+              43 C2 60 
+              70 47 01 
+              60 70 47 
+              10 23 8B 
+              40 41 68 
+              00 2A 01 
+              D0 19 43 
+              00 E0 99 
+              43 41 60 
+              70 47 06 
+              49 08 69 
+              80 06 08 
+              D5 05 4A 
+              10 68 09 
+              68 05 4B 
+              19 54 40 
+              1C 80 05 
+              80 0D 10 
+              60 70 47 
+              00 10 04 
+              40 1C 00 
+              00 20 38 
+              00 00 20 
+              70 B5 15 
+              46 52 1A 
+              00 2B 08 
+              D0 0A 28 
+              10 D0 01 
+              20 C0 03 
+              81 42 0C 
+              D3 1F 20 
+              80 02 07 
+              E0 0A 28 
+              07 D0 01 
+              20 00 03 
+              81 42 03 
+              D3 3B 20 
+              80 02 82 
+              42 01 D9 
+              46 20 70 
+              BD 01 26 
+              0C 46 B6 
+              02 03 E0 
+              20 46 FF 
+              F7 03 FE 
+              A4 19 AC 
+              42 F9 D9 
+              4F 20 70 
+              BD 10 B5 
+              02 4A 02 
+              49 00 F0 
+              20 F8 10 
+              BD 05 08 
+              00 00 34 
+
+
+
+ARM Macro Assembler    Page 13 
+
+
+              00 00 20 
+              30 B4 74 
+              46 64 1E 
+              25 78 64 
+              1C AB 42 
+              00 D2 1D 
+              46 63 5D 
+              5B 00 E3 
+              18 30 BC 
+              18 47 02 
+              E0 08 C8 
+              12 1F 08 
+              C1 00 2A 
+              FA D1 70 
+              47 00 20 
+              01 E0 01 
+              C1 12 1F 
+              00 2A FB 
+              D1 70 47 
+              F8 B5 16 
+              46 0F 46 
+              04 46 00 
+              25 03 E0 
+              39 46 B0 
+              47 64 1C 
+              6D 1C 20 
+              78 00 28 
+              F8 D1 28 
+              46 F8 BD 
+              F0 B5 00 
+              26 F6 43 
+              00 2A 04 
+              D0 12 68 
+              D2 43 00 
+              24 09 4F 
+              0D E0 32 
+              46 FA E7 
+              03 5D 5A 
+              40 08 23 
+              55 08 D2 
+              07 00 D0 
+              32 46 3A 
+              40 6A 40 
+              5B 1E F7 
+              D1 64 1C 
+              8C 42 F1 
+              D3 D0 43 
+              F0 BD 20 
+              83 B8 ED 
+              70 B5 01 
+              25 04 46 
+              81 B2 AD 
+              07 28 46 
+              FF F7 60 
+              FF AE 15 
+              31 46 28 
+              46 FF F7 
+              3F FC 00 
+              28 F9 D0 
+
+
+
+ARM Macro Assembler    Page 14 
+
+
+              20 46 70 
+              BD 00 00 
+              70 B5 0E 
+              48 00 F0 
+              BE F8 0E 
+              48 0D 4C 
+              05 46 80 
+              6D A0 60 
+              0C 48 40 
+              35 C0 6D 
+              20 60 0A 
+              48 00 6E 
+              60 60 08 
+              48 01 46 
+              64 31 4E 
+              C9 48 30 
+              4E C0 3B 
+              20 80 02 
+              00 F0 A8 
+              F8 A8 69 
+              E0 60 70 
+              BD 00 00 
+              48 E8 00 
+              00 24 00 
+              00 20 B8 
+              04 00 20 
+              FF F7 36 
+              FE FF F7 
+              08 FC 00 
+              F0 B0 F8 
+              FF F7 D4 
+              FF 1A 4E 
+              1B 48 01 
+              68 1B 48 
+              81 42 2B 
+              D1 07 21 
+              30 68 09 
+              03 1D 24 
+              42 18 E4 
+              02 A2 42 
+              23 D2 0A 
+              46 16 49 
+              FF F7 26 
+              FD 14 4D 
+              15 4F 2D 
+              1F 68 68 
+              39 68 88 
+              42 18 D1 
+              13 A0 FF 
+              F7 54 FF 
+              07 22 01 
+              20 12 03 
+              3B 68 00 
+              03 31 68 
+              FF F7 D0 
+              FD C0 B2 
+              28 70 4F 
+              28 D8 D1 
+              01 25 AD 
+
+
+
+ARM Macro Assembler    Page 15 
+
+
+              02 0F 27 
+              3F 03 20 
+              46 FF F7 
+              3F FD 64 
+              19 BC 42 
+              F9 D3 FF 
+              F7 9C FD 
+              CB E7 00 
+              00 24 00 
+              00 20 30 
+              00 00 20 
+              F5 FA AA 
+              55 14 00 
+              00 20 28 
+              00 00 20 
+              54 48 49 
+              53 20 73 
+              74 61 72 
+              74 20 49 
+              41 50 5F 
+              57 72 69 
+              74 65 5F 
+              46 6C 61 
+              73 68 21 
+              0A 00 00 
+              00 00 F8 
+              B5 06 46 
+              00 20 17 
+              46 05 46 
+              04 46 00 
+              90 0C E0 
+              30 68 00 
+              90 06 48 
+              04 22 40 
+              19 69 46 
+              FF F7 06 
+              FC 2D 1D 
+              24 1D ED 
+              B2 E4 B2 
+              36 1D BC 
+              42 F0 D3 
+              F8 BD 51 
+              05 00 20 
+              70 B5 00 
+              24 23 46 
+              05 E0 20 
+              C8 0E 19 
+              1B 1D DB 
+              B2 24 1D 
+              35 60 93 
+              42 F7 D3 
+              70 BD 00 
+              00 F0 B5 
+              87 B0 05 
+              46 86 18 
+              68 46 FF 
+              F7 FB FC 
+              00 24 09 
+              4F 0B E0 
+
+
+
+ARM Macro Assembler    Page 16 
+
+
+              39 19 04 
+              22 06 A8 
+              FF F7 DF 
+              FB 28 46 
+              06 99 FF 
+              F7 07 FD 
+              24 1D E4 
+              B2 2D 1D 
+              B5 42 F1 
+              D3 4F 20 
+              07 B0 F0 
+              BD 00 00 
+              51 05 00 
+              20 F8 B5 
+              06 46 00 
+              20 09 4F 
+              05 46 04 
+              46 00 90 
+              30 68 00 
+              90 78 19 
+              04 22 69 
+              46 FF F7 
+              C2 FB 64 
+              1C E4 B2 
+              2D 1D 36 
+              1D 10 2C 
+              F2 D3 F8 
+              BD 00 00 
+              10 05 00 
+              20 3E B5 
+              01 23 9B 
+              03 19 43 
+              9C 11 07 
+              23 1B 04 
+              18 43 21 
+              43 01 23 
+              FF F7 6A 
+              FC 06 22 
+              10 21 02 
+              20 FF F7 
+              CB FB 06 
+              22 20 21 
+              02 20 FF 
+              F7 C6 FB 
+              E1 20 40 
+              02 00 90 
+              69 46 8C 
+              80 00 20 
+              C8 80 08 
+              81 48 81 
+              A4 05 20 
+              46 FF F7 
+              1B FE 01 
+              22 11 46 
+              20 46 FF 
+              F7 4C FE 
+              01 22 00 
+              21 20 46 
+              FF F7 51 
+
+
+
+ARM Macro Assembler    Page 17 
+
+
+              FE 01 22 
+              11 46 20 
+              46 FF F7 
+              4C FE 01 
+              49 E0 11 
+              08 60 3E 
+              BD 00 E1 
+              00 E0 6C 
+              0A 00 00 
+              10 00 00 
+              20 28 00 
+              00 00 8E 
+              07 00 00 
+              94 0A 00 
+              00 38 00 
+              00 20 E8 
+              07 00 00 
+              9C 07 00 
+              00 00 00 
+              00 00 00 
+              00 00 00 
+              00 00 00 
+              00 00 00 
+              00 00 00 
+              00 00 00 
+              00 00 00 
+              00 00 00 
+              00 00 00 
+              00 00 00 
+              00 00 00 
+              00 00 00 
+              00 00            INCBIN           HT32\52241\IAP\Obj\IAP.axf.bin
+   41 00000A94                 ENDIF
+   42 00000A94         
+   43 00000A94                 IF               (USE_HT32_CHIP=HT32F52331_41)
+   45                          ENDIF
+   46 00000A94         
+   47 00000A94                 IF               (USE_HT32_CHIP=HT32F52342_52)
+   49                          ENDIF
+   50 00000A94         
+   51 00000A94                 IF               (USE_HT32_CHIP=HT32F52344_54)
+   53                          ENDIF
+   54 00000A94         
+   55 00000A94                 IF               (USE_HT32_CHIP=HT32F52243_53)
+   57                          ENDIF
+   58 00000A94         
+   59 00000A94                 IF               (USE_HT32_CHIP=HT32F0008)
+   61                          ENDIF
+   62 00000A94         
+   63 00000A94                 IF               (USE_HT32_CHIP=HT32F50220_30)
+   65                          ENDIF
+   66 00000A94         
+   67 00000A94                 IF               (USE_HT32_CHIP=HT32F50231_41)
+   69                          ENDIF
+   70 00000A94         
+   71 00000A94                 IF               (USE_HT32_CHIP=HT32F0006)
+   73                          ENDIF
+   74 00000A94         
+   75 00000A94                 IF               (USE_HT32_CHIP=HT32F57331_41)
+
+
+
+ARM Macro Assembler    Page 18 
+
+
+   77                          ENDIF
+   78 00000A94         
+   79 00000A94                 IF               (USE_HT32_CHIP=HT32F57342_52)
+   81                          ENDIF
+   82 00000A94         
+   83 00000A94                 IF               (USE_HT32_CHIP=HT32F52357_67)
+   85                          ENDIF
+   86 00000A94         
+   87 00000A94                 IF               (USE_HT32_CHIP=HT32F50343)
+   89                          ENDIF
+   90 00000A94         
+   91 00000A94                 END
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M0+ --apcs=inter
+work --depend=.\ht32\52241\ap\obj\iap.d -o.\ht32\52241\ap\obj\iap.o -I.\RTE\_AP
+ -ID:\Keil_v5\ARM\PACK\Holtek\HT32_DFP\1.0.20\ARM\INC\Holtek\HT32F5xxxx -ID:\Ke
+il_v5\ARM\CMSIS\Include --predefine="__MICROLIB SETA 1" --predefine="__UVISION_
+VERSION SETA 527" --predefine="USE_HT32F52231_41 SETA 1" --predefine="USE_HT32_
+CHIP SETA 2" --list=.\ht32\52241\ap\list\iap.lst iap.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+IAP 00000000
+
+Symbol: IAP
+   Definitions
+      At line 33 in file iap.s
+   Uses
+      None
+Comment: IAP unused
+1 symbol
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Absolute symbols
+
+HT32F0006 0000000A
+
+Symbol: HT32F0006
+   Definitions
+      At line 24 in file iap.s
+   Uses
+      At line 71 in file iap.s
+Comment: HT32F0006 used once
+HT32F0008 00000006
+
+Symbol: HT32F0008
+   Definitions
+      At line 20 in file iap.s
+   Uses
+      At line 59 in file iap.s
+Comment: HT32F0008 used once
+HT32F50220_30 00000007
+
+Symbol: HT32F50220_30
+   Definitions
+      At line 21 in file iap.s
+   Uses
+      At line 63 in file iap.s
+Comment: HT32F50220_30 used once
+HT32F50231_41 00000008
+
+Symbol: HT32F50231_41
+   Definitions
+      At line 22 in file iap.s
+   Uses
+      At line 67 in file iap.s
+Comment: HT32F50231_41 used once
+HT32F50343 0000000F
+
+Symbol: HT32F50343
+   Definitions
+      At line 28 in file iap.s
+   Uses
+      At line 87 in file iap.s
+Comment: HT32F50343 used once
+HT32F52220_30 00000001
+
+Symbol: HT32F52220_30
+   Definitions
+      At line 15 in file iap.s
+   Uses
+      At line 35 in file iap.s
+Comment: HT32F52220_30 used once
+HT32F52231_41 00000002
+
+Symbol: HT32F52231_41
+   Definitions
+      At line 16 in file iap.s
+   Uses
+      At line 39 in file iap.s
+Comment: HT32F52231_41 used once
+HT32F52243_53 00000005
+
+Symbol: HT32F52243_53
+
+
+
+ARM Macro Assembler    Page 2 Alphabetic symbol ordering
+Absolute symbols
+
+   Definitions
+      At line 19 in file iap.s
+   Uses
+      At line 55 in file iap.s
+Comment: HT32F52243_53 used once
+HT32F52331_41 00000003
+
+Symbol: HT32F52331_41
+   Definitions
+      At line 17 in file iap.s
+   Uses
+      At line 43 in file iap.s
+Comment: HT32F52331_41 used once
+HT32F52342_52 00000004
+
+Symbol: HT32F52342_52
+   Definitions
+      At line 18 in file iap.s
+   Uses
+      At line 47 in file iap.s
+Comment: HT32F52342_52 used once
+HT32F52344_54 00000009
+
+Symbol: HT32F52344_54
+   Definitions
+      At line 23 in file iap.s
+   Uses
+      At line 51 in file iap.s
+Comment: HT32F52344_54 used once
+HT32F52357_67 0000000B
+
+Symbol: HT32F52357_67
+   Definitions
+      At line 25 in file iap.s
+   Uses
+      At line 83 in file iap.s
+Comment: HT32F52357_67 used once
+HT32F57331_41 0000000D
+
+Symbol: HT32F57331_41
+   Definitions
+      At line 26 in file iap.s
+   Uses
+      At line 75 in file iap.s
+Comment: HT32F57331_41 used once
+HT32F57342_52 0000000E
+
+Symbol: HT32F57342_52
+   Definitions
+      At line 27 in file iap.s
+   Uses
+      At line 79 in file iap.s
+Comment: HT32F57342_52 used once
+INCLUDE_IAP 00000001
+
+Symbol: INCLUDE_IAP
+   Definitions
+      At line 31 in file iap.s
+   Uses
+
+
+
+ARM Macro Assembler    Page 3 Alphabetic symbol ordering
+Absolute symbols
+
+      None
+Comment: INCLUDE_IAP unused
+15 symbols
+350 symbols in table

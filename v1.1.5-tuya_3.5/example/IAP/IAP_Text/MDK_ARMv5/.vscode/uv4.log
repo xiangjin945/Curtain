@@ -1,0 +1,216 @@
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'AP'
+assembling iap.s...
+compiling mcu_transplant.c...
+..\OTA\SRC\mcu_transplant.c(25): warning:  #940-D: missing return statement at end of non-void function "uart_transmit_output_fun" 
+  }
+..\OTA\SRC\mcu_transplant.c: 1 warning, 0 errors
+compiling main.c...
+..\Src_AP\main.c(85): warning:  #188-D: enumerated type mixed with another type
+  	PWRCU_BODCmd(ENABLE);
+..\Src_AP\main.c(88): warning:  #188-D: enumerated type mixed with another type
+  	PWRCU_LVDIntWakeupConfig(ENABLE);
+..\Src_AP\main.c(89): warning:  #188-D: enumerated type mixed with another type
+  	PWRCU_LVDCmd(ENABLE);
+..\Src_AP\main.c: 3 warnings, 0 errors
+compiling ht32f5xxxx_01_it.c...
+..\Src_AP\ht32f5xxxx_01_it.c(594): warning:  #188-D: enumerated type mixed with another type
+  	EXTI_WakeupEventIntConfig(DISABLE);		// ENABLE DISABLE
+..\Src_AP\ht32f5xxxx_01_it.c(635): warning:  #1-D: last line of file ends without a newline
+  }
+..\Src_AP\ht32f5xxxx_01_it.c(435): warning:  #177-D: function "KEY1_Button_Process"  was declared but never referenced
+  __STATIC_INLINE void KEY1_Button_Process(void)
+..\Src_AP\ht32f5xxxx_01_it.c(476): warning:  #177-D: function "KEY2_Button_Process"  was declared but never referenced
+  __STATIC_INLINE void KEY2_Button_Process(void)
+..\Src_AP\ht32f5xxxx_01_it.c: 4 warnings, 0 errors
+compiling mcu_ota_handler.c...
+..\OTA\SRC\mcu_ota_handler.c(75): warning:  #940-D: missing return statement at end of non-void function "mcu_flash_init" 
+  }
+..\OTA\SRC\mcu_ota_handler.c(93): warning:  #940-D: missing return statement at end of non-void function "mcu_flash_erase" 
+  }
+..\OTA\SRC\mcu_ota_handler.c(156): warning:  #940-D: missing return statement at end of non-void function "mcu_flash_read" 
+  }
+..\OTA\SRC\mcu_ota_handler.c(548): warning:  #177-D: variable "i"  was declared but never referenced
+              int i;
+..\OTA\SRC\mcu_ota_handler.c(623): warning:  #177-D: variable "size"  was declared but never referenced
+      u32 size = s_dfu_settings.bank_1.image_size;
+..\OTA\SRC\mcu_ota_handler.c(643): warning:  #177-D: variable "ret"  was declared but never referenced
+      uint8_t ret;
+..\OTA\SRC\mcu_ota_handler.c(203): warning:  #550-D: variable "m_firmware_start_addr"  was set but never used
+  static uint32_t m_firmware_start_addr;          /**< Start address of the current firmware image. */
+..\OTA\SRC\mcu_ota_handler.c: 7 warnings, 0 errors
+compiling system.c...
+..\OTA\SRC\system.c(301): warning:  #177-D: variable "bt_time"  was declared but never referenced
+    bt_time_struct_data_t bt_time;
+..\OTA\SRC\system.c(302): warning:  #177-D: variable "time_zone_100"  was declared but never referenced
+    unsigned short time_zone_100;
+..\OTA\SRC\system.c: 2 warnings, 0 errors
+compiling protocol.c...
+..\OTA\SRC\protocol.c(121): warning:  #223-D: function "uart_transmit_output_fun" declared implicitly
+      uart_transmit_output_fun(value);
+..\OTA\SRC\protocol.c(266): warning:  #940-D: missing return statement at end of non-void function "dp_download_control_handle" 
+  }
+..\OTA\SRC\protocol.c(340): warning:  #174-D: expression has no effect
+  		I4_LOG("ptime.runtime = %d.\r\n",ptime.runtime);
+..\OTA\SRC\protocol.c(363): warning:  #174-D: expression has no effect
+  			I4_LOG("ptime.runtime = %d.\r\n",ptime.runtime);
+..\OTA\SRC\protocol.c(413): warning:  #940-D: missing return statement at end of non-void function "dp_download_percent_control_handle" 
+  }
+..\OTA\SRC\protocol.c(398): warning:  #177-D: variable "ret"  was declared but never referenced
+      unsigned char ret;
+..\OTA\SRC\protocol.c(399): warning:  #550-D: variable "percent_control"  was set but never used
+      unsigned long percent_control;
+..\OTA\SRC\protocol.c(669): warning:  #177-D: variable "string_data"  was declared but never referenced
+      unsigned char string_data = 0;
+..\OTA\SRC\protocol.c(829): warning:  #223-D: function "Coundownswitch_EraseWrite" declared implicitly
+          Coundownswitch_EraseWrite();
+..\OTA\SRC\protocol.c(817): warning:  #177-D: variable "string_data"  was declared but never referenced
+      unsigned char string_data;
+..\OTA\SRC\protocol.c(860): warning:  #223-D: function "Coundownflag_EraseWrite" declared implicitly
+          Coundownflag_EraseWrite();
+..\OTA\SRC\protocol.c(877): warning:  #177-D: variable "time"  was declared but never referenced
+  	u8 time[4]={0};
+..\OTA\SRC\protocol.c(879): warning:  #177-D: variable "flag"  was declared but never referenced
+      u32 i, j,k, flag = 0,flashp=0,position=0;
+..\OTA\SRC\protocol.c(1153): warning:  #174-D: expression has no effect
+  		I4_LOG("Close the prompt window!\r\n");
+..\OTA\SRC\protocol.c(1463): warning:  #940-D: missing return statement at end of non-void function "bt_send_one_time_password_token" 
+  }
+..\OTA\SRC\protocol.c(1576): warning:  #174-D: expression has no effect
+      I4_LOG("factor reboot\r\n");
+..\OTA\SRC\protocol.c(565): warning:  #177-D: function "dp_download_led_setting_handle"  was declared but never referenced
+  static unsigned char dp_download_led_setting_handle(const unsigned char value[], unsigned short length)
+..\OTA\SRC\protocol.c: 17 warnings, 0 errors
+compiling mcu_api.c...
+..\OTA\SRC\mcu_api.c(188): warning:  #223-D: function "isdigit" declared implicitly
+    if (!isdigit(c = *up))
+..\OTA\SRC\mcu_api.c(190): warning:  #223-D: function "isspace" declared implicitly
+      while (isspace(c))
+..\OTA\SRC\mcu_api.c(204): warning:  #223-D: function "isdigit" declared implicitly
+    for (n = '0' - c; isdigit(c = *++up);)
+..\OTA\SRC\mcu_api.c(648): warning:  #177-D: variable "offset"  was declared but never referenced
+      unsigned short offset = 0;
+..\OTA\SRC\mcu_api.c(649): warning:  #550-D: variable "rx_value_len"  was set but never used
+      unsigned short rx_value_len = 0; //数据帧长�?
+..\OTA\SRC\mcu_api.c(884): warning:  #1182-D: a declaration cannot have a label
+  				u8 count = 0;
+..\OTA\SRC\mcu_api.c(832): warning:  #546-D: transfer of control bypasses initialization of:
+            variable "count"  (declared at line 884)
+  			switch(cmd_type)
+  			^
+..\OTA\SRC\mcu_api.c(919): warning:  #1-D: last line of file ends without a newline
+  }
+..\OTA\SRC\mcu_api.c: 8 warnings, 0 errors
+compiling tybn1_init.c...
+compiling adc_init.c...
+..\Source\src\adc_init.c(59): warning:  #177-D: variable "count"  was declared but never referenced
+  	static int flagVolage = 0 , count = 0;
+..\Source\src\adc_init.c: 1 warning, 0 errors
+compiling bftm_init.c...
+compiling gpio_init.c...
+compiling gptm0_init.c...
+compiling low_power_iniit.c...
+compiling motor_init.c...
+..\Source\src\motor_init.c(191): warning:  #188-D: enumerated type mixed with another type
+      CKCU_PeripClockConfig(CKCUClock, ENABLE);
+..\Source\src\motor_init.c(216): warning:  #188-D: enumerated type mixed with another type
+      MCTM_CHMOECmd(HT_MCTM0, ENABLE);
+..\Source\src\motor_init.c(232): warning:  #188-D: enumerated type mixed with another type
+      CKCU_PeripClockConfig(CKCUClock, ENABLE);
+..\Source\src\motor_init.c(342): warning:  #188-D: enumerated type mixed with another type
+  	PB2_PWM_INIT(0,ENABLE);
+..\Source\src\motor_init.c(343): warning:  #188-D: enumerated type mixed with another type
+  	PB3_PWM_INIT(0,ENABLE);
+..\Source\src\motor_init.c(356): warning:  #188-D: enumerated type mixed with another type
+  	PB2_PWM_INIT(80,ENABLE);
+..\Source\src\motor_init.c(357): warning:  #188-D: enumerated type mixed with another type
+  	PB3_PWM_INIT(100,ENABLE);
+..\Source\src\motor_init.c(360): warning:  #188-D: enumerated type mixed with another type
+  	PB2_PWM_INIT(60,ENABLE);
+..\Source\src\motor_init.c(361): warning:  #188-D: enumerated type mixed with another type
+  	PB3_PWM_INIT(100,ENABLE);
+..\Source\src\motor_init.c(364): warning:  #188-D: enumerated type mixed with another type
+  	PB2_PWM_INIT(40,ENABLE);
+..\Source\src\motor_init.c(365): warning:  #188-D: enumerated type mixed with another type
+  	PB3_PWM_INIT(100,ENABLE);
+..\Source\src\motor_init.c(368): warning:  #188-D: enumerated type mixed with another type
+  	PB2_PWM_INIT(20,ENABLE);
+..\Source\src\motor_init.c(369): warning:  #188-D: enumerated type mixed with another type
+  	PB3_PWM_INIT(100,ENABLE);
+..\Source\src\motor_init.c(372): warning:  #188-D: enumerated type mixed with another type
+  	PB2_PWM_INIT(0,ENABLE);
+..\Source\src\motor_init.c(373): warning:  #188-D: enumerated type mixed with another type
+  	PB3_PWM_INIT(100,ENABLE);
+..\Source\src\motor_init.c(389): warning:  #188-D: enumerated type mixed with another type
+  	PB2_PWM_INIT(100,ENABLE);
+..\Source\src\motor_init.c(390): warning:  #188-D: enumerated type mixed with another type
+  	PB3_PWM_INIT(80,ENABLE);
+..\Source\src\motor_init.c(393): warning:  #188-D: enumerated type mixed with another type
+  	PB2_PWM_INIT(100,ENABLE);
+..\Source\src\motor_init.c(394): warning:  #188-D: enumerated type mixed with another type
+  	PB3_PWM_INIT(60,ENABLE);
+..\Source\src\motor_init.c(397): warning:  #188-D: enumerated type mixed with another type
+  	PB2_PWM_INIT(100,ENABLE);
+..\Source\src\motor_init.c(398): warning:  #188-D: enumerated type mixed with another type
+  	PB3_PWM_INIT(40,ENABLE);
+..\Source\src\motor_init.c(401): warning:  #188-D: enumerated type mixed with another type
+  	PB2_PWM_INIT(100,ENABLE);
+..\Source\src\motor_init.c(402): warning:  #188-D: enumerated type mixed with another type
+  	PB3_PWM_INIT(20,ENABLE);
+..\Source\src\motor_init.c(405): warning:  #188-D: enumerated type mixed with another type
+  	PB2_PWM_INIT(100,ENABLE);
+..\Source\src\motor_init.c(406): warning:  #188-D: enumerated type mixed with another type
+  	PB3_PWM_INIT(0,ENABLE);
+..\Source\src\motor_init.c(453): warning:  #188-D: enumerated type mixed with another type
+  	CKCU_PeripClockConfig(CKCUClock, ENABLE);
+..\Source\src\motor_init.c: 26 warnings, 0 errors
+compiling save_all_setting.c...
+compiling service_logic_manage.c...
+compiling head.c...
+..\Source\src\head.c(166): warning:  #177-D: variable "tmp_buf"  was declared but never referenced
+  	char* tmp_buf = NULL;
+..\Source\src\head.c(203): warning:  #177-D: variable "tmp_buf"  was declared but never referenced
+  	char* tmp_buf = NULL;
+..\Source\src\head.c(320): warning:  #188-D: enumerated type mixed with another type
+  			EXTI_WakeupEventIntConfig(ENABLE);
+..\Source\src\head.c(322): warning:  #188-D: enumerated type mixed with another type
+  			ADC_Cmd(HT_ADC, DISABLE);//启用或禁用指定的ADC�? 
+..\Source\src\head.c(531): warning:  #223-D: function "update_current_runtime" declared implicitly
+  		update_current_runtime(0);
+..\Source\src\head.c(567): warning:  #186-D: pointless comparison of unsigned integer with zero
+  		if(vsignStopPercent < 0){
+..\Source\src\head.c(607): warning:  #223-D: function "update_current_runtime" declared implicitly
+  	update_current_runtime(0);
+..\Source\src\head.c: 7 warnings, 0 errors
+compiling tst_function.c...
+..\Source\src\tst_function.c(192): warning:  #177-D: variable "runtime"  was declared but never referenced
+      float runtime = 0;
+..\Source\src\tst_function.c(335): warning:  #177-D: variable "flag"  was declared but never referenced
+          u8 flag = 0;
+..\Source\src\tst_function.c(578): warning:  #174-D: expression has no effect
+  			I4_LOG("stop\r\n");
+..\Source\src\tst_function.c(897): warning:  #223-D: function "update_current_runtime" declared implicitly
+  	update_current_runtime(0);
+..\Source\src\tst_function.c(934): warning:  #174-D: expression has no effect
+  			I4_LOG("open curtain %d\r\n ",curtain_mode);
+..\Source\src\tst_function.c(944): warning:  #174-D: expression has no effect
+  			I4_LOG("close curtain =  %d\r\n",curtain_mode);
+..\Source\src\tst_function.c(1051): warning:  #174-D: expression has no effect
+  				I4_LOG("maual run_state = %d\r\n",run_state);
+..\Source\src\tst_function.c(1058): warning:  #174-D: expression has no effect
+  				I4_LOG("maual run_state = %d\r\n",run_state);
+..\Source\src\tst_function.c(1078): warning:  #174-D: expression has no effect
+  			I4_LOG("ReturnJourney start open= %d\r\n",variable.full_running_time);
+..\Source\src\tst_function.c(1083): warning:  #174-D: expression has no effect
+  			I4_LOG("ReturnJourney start close= %d\r\n",variable.full_running_time);
+..\Source\src\tst_function.c(1138): warning:  #186-D: pointless comparison of unsigned integer with zero
+  		if(variable.full_running_time < 0){
+..\Source\src\tst_function.c(1141): warning:  #186-D: pointless comparison of unsigned integer with zero
+  		if(variable.returntime < 0){
+..\Source\src\tst_function.c: 12 warnings, 0 errors
+linking...
+Program Size: Code=22944 RO-data=2736 RW-data=336 ZI-data=4304  
+FromELF: creating hex file...
+After Build - User command #1: fromelf --bin -o ".\HT32\52241\AP\Obj\IAP_AP.axf.bin" ".\HT32\52241\AP\Obj\IAP_AP.axf"
+".\HT32\52241\AP\Obj\IAP_AP.axf" - 0 Error(s), 88 Warning(s).
+Build Time Elapsed:  00:00:06
