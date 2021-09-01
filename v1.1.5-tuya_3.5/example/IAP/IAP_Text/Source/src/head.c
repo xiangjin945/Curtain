@@ -1,7 +1,7 @@
 /*
  * @Author: i4season.xiang
  * @Date: 2021-03-24 09:52:24
- * @LastEditTime: 2021-08-31 18:59:08
+ * @LastEditTime: 2021-09-01 14:24:03
  * @FilePath: \curtain\v1.1.5-tuya_3.5\example\IAP\IAP_Text\Source\src\head.c
  */
 #include "head.h"
@@ -74,7 +74,7 @@ void key_delay_process_start(void);
 
 void I4_LockedRotorCallback(void)
 {
-
+	KeyControl = FALSE;
 	ms_delay_systick(1000);
 	if(signPositive_inversion == 1)
 	{
@@ -90,7 +90,7 @@ void I4_LockedRotorCallback(void)
 		motor_stop();
 		signPositive_inversion = 0;
 	}
-
+	KeyControl = TRUE;
 	percor.key = 0;
 
 }
@@ -614,9 +614,10 @@ void key_delay_process_start(void){
 	key_delay_process_flag = TRUE;
 }
 void key_delay_process_callback(void){
+	printf("1.key_delay_process_callback keycontrol:%d run_mode_flag:%d \r\n",KeyControl,variable.run_mode_flag);
 	KeyControl = TRUE;
 	key_delay_process_flag = FALSE;
-	//printf("key_delay_process_callback ty_control:%d auto_run_mode:%d %d\r\n",ty_control,//variable.auto_run_mode ,variable.run_mode_flag);
+	printf("2.key_delay_process_callback keycontrol:%d run_mode_flag:%d \r\n",KeyControl,variable.run_mode_flag);
 }
 
 u32 signStallCnt=0,signStallCntcur=0;
@@ -813,7 +814,7 @@ void I4_Timecallback(void)
         }
 
 		if(!RtcCntSign){
-//printf(" FirstStartSign = %d , cFirstStartSign = %d !\n",FirstStartSign,cFirstStartSign);
+			printf(" FirstStartSign = %d , cFirstStartSign = %d !\n",FirstStartSign,cFirstStartSign);
 			if(FirstStartSign == TRUE)
 			{
 
@@ -872,7 +873,6 @@ void I4_LEDHandler(void)
 		}
 	}
 	//***********************************
-
 }
 
 void I4_MainTask(void)

@@ -330,6 +330,40 @@ void RTC_IRQHandler(void)
 	
 }
 extern bool leftkey_up ,rightkey_up;
+static void Left_key_interrupt(void)
+{
+	if(variable.run_mode_flag){
+		if(KeyControl)
+			{
+				leftkey_up = TRUE;
+				printf(" left true!\r\n");
+			}else{
+				leftkey_up = FALSE;
+				printf(" left false\r\n");
+			}
+		}else{
+				leftkey_up = FALSE;
+				printf("run_mode_flag off  left false\r\n");
+	}
+}
+static void Right_key_interrupt(void)
+{
+	if(variable.run_mode_flag){
+		if(KeyControl)
+			{
+				rightkey_up = TRUE;
+				printf(" rightkey_up true!\r\n");
+			}else{
+				rightkey_up = FALSE;
+				printf(" rightkey_up false\r\n");
+			}
+		}else{
+				rightkey_up = FALSE;
+				printf("run_mode_flag off  rightkey_up false\r\n");
+	}
+}
+
+
 int key_cnt, timediff = 0;
 bool down_flag = FALSE;
 /*********************************************************************************************************//**
@@ -359,19 +393,7 @@ __STATIC_INLINE void WAKEUP_Button_Process(void)
 		//printf("key_cnt = %d\r\n",timediff);
 		if(timediff < 2)
 		{
-			if(variable.run_mode_flag){
-				if(KeyControl)
-				{
-					leftkey_up = TRUE;
-					printf("leftkey_up = TRUE\r\n");
-				}else{
-					leftkey_up = FALSE;
-					printf("leftkey_up = FALSE\r\n");
-				}
-			}else{
-					leftkey_up = FALSE;
-					printf("run_mode_flag off left = FALSE\r\n");
-			}
+			Left_key_interrupt();
 			
 		}
 
@@ -393,19 +415,7 @@ __STATIC_INLINE void WAKEUP_Button_Process(void)
 		//printf("Rkey_cnt = %d\r\n",timediff);
 		if(timediff < 2)
 		{
-			if(variable.run_mode_flag){
-				if(KeyControl)
-				{
-					rightkey_up = TRUE;
-					printf("rightkey_up = TRUE\r\n");
-				}else{
-					rightkey_up = FALSE;
-					printf("rightkey_up = FALSE\r\n");
-				}
-			}else{
-					rightkey_up = FALSE;
-					printf("run_mode_flag off right = FALSE\r\n");
-			}
+			Right_key_interrupt();
 		}
 		guKeyState[1] = TRUE;
 	}
@@ -575,6 +585,18 @@ void EXTI4_15_IRQHandler(void)
 }
 
 
+static void WAKEUP_key_Process(void)
+{
+	if(EXTI_GetEdgeStatus(EXTI_CHANNEL_2, EXTI_HIGH_LEVEL) || EXTI_GetEdgeStatus(EXTI_CHANNEL_2, EXTI_LOW_LEVEL))
+	{
+		Right_key_interrupt();
+	}
+
+	if(EXTI_GetEdgeStatus(EXTI_CHANNEL_1, EXTI_HIGH_LEVEL) || EXTI_GetEdgeStatus(EXTI_CHANNEL_1, EXTI_LOW_LEVEL))
+	{
+		Left_key_interrupt();
+	}
+}
 /*********************************************************************************************************//**
  * @brief   This function handles Event Wake Up interrupt.
  * @retval  None
@@ -588,11 +610,12 @@ void EVWUP_IRQHandler(void)
 	gptm0_4low = 0;
 	if(low_power_event_flag == 1)
 	{	
-		WAKEUP_Button_Process();
+		
 		xRtcCounterTmp = 1;
 		// //notesxRtcCounterTmp%d\n",xRtcCounterTmp);
 		low_power_event_flag = 0;
 		//printf("huan\r\n");
+		WAKEUP_Button_Process();
 		key_cnt = RTC_GetCounter();
 		
 		tybn1_out_sleep_mode();

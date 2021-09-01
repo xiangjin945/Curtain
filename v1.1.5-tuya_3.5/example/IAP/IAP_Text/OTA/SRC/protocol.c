@@ -296,13 +296,13 @@ void timer_curtain_control(u8 current_percent)
 //		ms_delay_systick(3000);
 	}
 
-	if(current_percent == variable.global_percent){
+	if(current_percent == variable.global_percent){//TODO:目标百分比跟当前百分比重复的情况处理
 		mcu_dp_value_update(DPID_PERCENT_CONTROL, variable.global_percent);
 		update_current_runtime(0);
 		mcu_dp_value_update(DPID_PERCENT_UP_CONTROL, variable.global_percent);
 		mcu_dp_enum_update(DPID_CONTROL, 1);
 		key_up_flag = 0;
-		//ty_control0;
+		KeyControl = TRUE;
 		return;
 	}
 
