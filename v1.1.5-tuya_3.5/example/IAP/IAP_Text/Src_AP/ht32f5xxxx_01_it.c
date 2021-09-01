@@ -606,7 +606,7 @@ void EVWUP_IRQHandler(void)
 	//USART_SendData(HT_USART0,0xDD);
 	// NOTE: 2020.12.1 reset timing when IRQ
 	// NOTE: 2020.12.2 捕获唤醒�?�?时，a.重置低功耗时间标�?		b.重置低功耗状态标�?	
-
+	WAKEUP_Button_Process();
 	gptm0_4low = 0;
 	if(low_power_event_flag == 1)
 	{	
@@ -615,7 +615,7 @@ void EVWUP_IRQHandler(void)
 		// //notesxRtcCounterTmp%d\n",xRtcCounterTmp);
 		low_power_event_flag = 0;
 		//printf("huan\r\n");
-		WAKEUP_Button_Process();
+		
 		key_cnt = RTC_GetCounter();
 		
 		tybn1_out_sleep_mode();

@@ -517,6 +517,8 @@ void data_handle(unsigned short offset)
       {
           FLASH_ErasePage(i);
       }
+      FLASH_ErasePage(APP_NEW_FW_SETTING_ADR);
+      FLASH_ErasePage(APP_NEW_FW_SETTING_ADR + 1024);
       USART_SendData(HT_USART0,0xEA);
       total_len = bt_uart_rx_buf[offset + LENGTH_HIGH] * 0x100;
       total_len += bt_uart_rx_buf[offset + LENGTH_LOW];
