@@ -1,7 +1,7 @@
 /*
  * @Author: i4season.xiang
  * @Date: 2021-03-24 09:52:24
- * @LastEditTime: 2021-09-01 21:56:36
+ * @LastEditTime: 2021-09-02 10:36:42
  * @FilePath: \curtain\v1.1.5-tuya_3.5\example\IAP\IAP_Text\Source\src\head.c
  */
 #include "head.h"
@@ -63,6 +63,7 @@ bool ProductionTestFlag = FALSE;
 bool lowpower_flag = FALSE;
 bool lockturnflag = FALSE;
 bool key_delay_process_flag = FALSE;
+bool AgeingFlag = FALSE;
 
 
 silent_runtime silenttime;
@@ -752,7 +753,7 @@ void I4_FullInspection(void)
 			open_curtain();
 		}
 
-		if(motor_current > protect_current || i4_LowVlotageflag)
+		if(motor_current > protect_current || AgeingFlag || i4_LowVlotageflag)
 		{
 			flag = TRUE;
 			SET_LED(RESET);
