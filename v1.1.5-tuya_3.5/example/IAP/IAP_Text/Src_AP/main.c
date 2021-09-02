@@ -1,7 +1,7 @@
 /*
  * @Author: i4season.xiang
  * @Date: 2021-02-03 18:10:57
- * @LastEditTime: 2021-09-01 20:06:14
+ * @LastEditTime: 2021-09-01 22:11:06
  * @FilePath: \curtain\v1.1.5-tuya_3.5\example\IAP\IAP_Text\Src_AP\main.c
  */
 /*********************************************************************************************************/ /**
@@ -100,11 +100,11 @@ int main(void)
 	}else{
 #endif
 		rf_test();
-		if(license_readback())
-		{
+		// if(license_readback())
+		// {
 			printf("VERSION %s\r\n",MCU_VER);
 			I4_MainTask();
-		}
+		// }
 		
 
 #if PRODUCE_MEASURE		

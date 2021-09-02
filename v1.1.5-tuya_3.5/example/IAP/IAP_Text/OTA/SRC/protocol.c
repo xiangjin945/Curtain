@@ -303,6 +303,7 @@ void timer_curtain_control(u8 current_percent)
 		mcu_dp_enum_update(DPID_CONTROL, 1);
 		key_up_flag = 0;
 		KeyControl = TRUE;
+        LEDFlashing_1s();
 		return;
 	}
 

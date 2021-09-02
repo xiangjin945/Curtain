@@ -1,7 +1,7 @@
 /*
  * @Author: i4season.xiang
  * @Date: 2021-03-24 09:52:24
- * @LastEditTime: 2021-09-01 20:05:40
+ * @LastEditTime: 2021-09-01 21:56:36
  * @FilePath: \curtain\v1.1.5-tuya_3.5\example\IAP\IAP_Text\Source\src\head.c
  */
 #include "head.h"
@@ -321,7 +321,7 @@ void low_power_consump_fun(void)
 			TM_DeInit(HT_MCTM0);
 			TM_DeInit(HT_SCTM1);
 
-			//printf("enter slepp!\r\n");
+			printf("enter slepp  %d!\r\n",KeyControl);
 			EXTI_ClearWakeupFlag(EXTI_CHANNEL_1);
 			EXTI_ClearWakeupFlag(EXTI_CHANNEL_2);
 			EXTI_ClearWakeupFlag(EXTI_CHANNEL_5);
@@ -335,7 +335,7 @@ void low_power_consump_fun(void)
 			adc_init();
 			// uart0_init();	//B7.B8, TYBN1
 			// usart0_init();	//C4.C5, 调试用
-			key_init();			  //按键初始化
+			// key_init();			  //按键初始化
 			
 		}
 }
