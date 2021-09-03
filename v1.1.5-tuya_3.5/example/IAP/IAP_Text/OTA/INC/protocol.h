@@ -62,12 +62,12 @@
 
 
 
-#define MCU_VER "1.3.2"                              //用户的软件版�?用于MCU固件升级,MCU升级版本需修改
-#define MCU_APP_VER_NUM      0x010302			//用户的软件版�?用于MCU固件升级,MCU升级版本需修改     				1.0.0
+#define MCU_VER "1.3.5"                              //用户的软件版�?用于MCU固件升级,MCU升级版本需修改
+#define MCU_APP_VER_NUM      0x010305			//用户的软件版�?用于MCU固件升级,MCU升级版本需修改     				1.0.0
 #define MCU_HARD_VER_NUM     0x010100					//用户的硬件版�?当前没有实际用处
 #define MCU_VERSION_1					0x01
 #define	MCU_VERSION_2					0x03
-#define	MCU_VERSION_3					0x02
+#define	MCU_VERSION_3					0x05
 extern unsigned char versions[3];
 /******************************************************************************
                           2:MCU是否需要支固件升级                  

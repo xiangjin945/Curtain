@@ -60,6 +60,8 @@ void usart_fun(u8 data){
 }
 
 static dfu_settings_t s_dfu_settings;
+static dfu_settings_t s_dfu_config;
+void i4_erase_write(void);
 /*****************************************************************************
 函数名称 : mcu_flash_init
 功能描述 :flash初始化函数
@@ -171,7 +173,7 @@ void delay1s(void)
 }
 void mcu_device_delay_restart(void)
 {
-    delay1s();
+    ms_delay_systick(1000);
 	//error "è¯·è‡ªè¡Œå®Œå–„è¯¥åŠŸèƒ½,å®Œæˆ�å�Žè¯·åˆ é™¤è¯¥è¡Œ"
     NVIC_SystemReset();
 }
@@ -356,6 +358,7 @@ static void mcu_ota_file_info_req(uint8_t*recv_data,uint32_t recv_len)
                 memcpy(s_dfu_settings.progress.firmware_file_md5,&recv_data[3+8],16);
                 s_dfu_settings.write_offset = s_dfu_settings.progress.firmware_image_offset_last;
                 state = 0;
+                memcpy((uint8_t*)&s_dfu_config,(uint8_t*)&s_dfu_settings,sizeof(s_dfu_settings));
                 mcu_flash_write(DFU_SETTING_SAVE_ADDR,(uint8_t*)&s_dfu_settings,sizeof(s_dfu_settings));
             }
 
@@ -697,6 +700,8 @@ static void on_data_write_request_sched(void * data)
     {
         //在此处打断点可以查看结构体中固件包的长度和校验码等信息
     	mcu_flash_write(DFU_SETTING_SAVE_ADDR,(uint8_t*)&s_dfu_settings,sizeof(s_dfu_settings)); //将升级固件包的信息写到指定地址
+        printf("state 0!\r\n");
+        i4_erase_write();
         on_dfu_complete();
     }
     else
@@ -776,5 +781,18 @@ uint32_t mcu_ota_init(void)
 
     return 0;
 }
+void i4_erase_write(void)
+{
+    int crc = 0,version = 0;
+    printf("s_dfu_settings %d,%d\r\n",s_dfu_config.progress.firmware_file_crc,s_dfu_config.progress.firmware_file_version);
+
+    FLASH_ErasePage(DFU_SETTING_SAVE_ADDR);
+    mcu_flash_write(DFU_SETTING_SAVE_ADDR,(uint8_t*)&s_dfu_config,sizeof(s_dfu_config));
+    memcpy((u8 *)&image_crc, (u8 *)&copyBuffer[8], 4);
+    version = rw(DFU_SETTING_SAVE_ADDR + 72);
+    crc = rw(DFU_SETTING_SAVE_ADDR + 80);
+    printf("\r\nver:%d crc:%d\r\n",version,crc);
+}
+
 #endif
 

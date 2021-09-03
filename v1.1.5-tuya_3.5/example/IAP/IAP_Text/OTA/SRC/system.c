@@ -351,7 +351,7 @@ void data_handle(unsigned short offset)
 		  lednetworkflag = bt_work_state;
 		  all_data_update_fun();
       if(!MotorRunStatus){
-        check_battery_level(0);
+        check_battery_level(0);   //TODO: 电量检测
       }
 		  
 		}
@@ -528,7 +528,9 @@ void data_handle(unsigned short offset)
 	  case TUYA_BCI_UART_COMMON_MCU_OTA_FILE_INFO:
       gptm0_4low = 0;
       USART_SendData(HT_USART0,0xEB);
-      usart0_send(bt_uart_rx_buf,42);
+      for(i=0;i<42;i++){
+        printf("%x ",bt_uart_rx_buf[i]);
+      }
       total_len = bt_uart_rx_buf[offset + LENGTH_HIGH] * 0x100;
       total_len += bt_uart_rx_buf[offset + LENGTH_LOW];
       mcu_ota_proc(cmd_type,&bt_uart_rx_buf[offset + DATA_START],total_len);
@@ -547,7 +549,7 @@ void data_handle(unsigned short offset)
         
         total_len = bt_uart_rx_buf[offset + LENGTH_HIGH] * 0x100;
         total_len += bt_uart_rx_buf[offset + LENGTH_LOW];
-        usart0_send(bt_uart_rx_buf,total_len+7);
+        // usart0_send(bt_uart_rx_buf,total_len+7);
         mcu_ota_proc(cmd_type,&bt_uart_rx_buf[offset + DATA_START],total_len);
         break;
 
