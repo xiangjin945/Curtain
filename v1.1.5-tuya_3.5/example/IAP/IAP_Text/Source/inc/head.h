@@ -1,8 +1,8 @@
 /*
  * @Author: i4season.xiang
  * @Date: 2021-03-24 09:47:48
- * @LastEditTime: 2021-08-30 19:00:13
- * @FilePath: \v1.1.5-tuya_3.5\example\IAP\IAP_Text\Source\inc\head.h
+ * @LastEditTime: 2021-09-02 10:25:58
+ * @FilePath: \curtain\v1.1.5-tuya_3.5\example\IAP\IAP_Text\Source\inc\head.h
  */
 #include "ht32.h"
 #include "ht32_board.h"
@@ -101,6 +101,7 @@ extern bool lowpower_flag ;
 extern bool lockturnflag;
 extern u32 key_delay_process;
 extern bool KeyControl;
+extern bool AgeingFlag;
 
 typedef struct Silent_running_time{
 	u32 Muteopentime;
