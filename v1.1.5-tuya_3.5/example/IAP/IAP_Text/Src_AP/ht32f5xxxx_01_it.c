@@ -213,7 +213,7 @@ void BFTM0_IRQHandler(void)
  * @retval  None
  ************************************************************************************************************/
 u32 savetimecnt=0,dianliucnt=0;
-u32 voltage_test = 0,agecnt = 0;
+u32 voltage_test = 0;
 void GPTM0_IRQHandler(void)
 {
 	float real_volt = 0;
@@ -242,7 +242,7 @@ void GPTM0_IRQHandler(void)
 	if(MotorCDC>400)
 	{
 		u8 i=0,t=0,k=0;
-		u32 tsum=0,ksum;
+		u32 sum=0;
 		for(i=0;i<10;i++)
 		{
 			voltage_test = (HT_ADC->DR[1] & 0x0FFF);
@@ -250,36 +250,24 @@ void GPTM0_IRQHandler(void)
 			if(real_volt > protect_current)
 			{
 				t++;
-				tsum += real_volt;
+				sum += real_volt;
 			}else{
 				k++;
-				ksum += real_volt;
 			}
 			
 		}
 		if(t>5)
 		{
 			
-			motor_current = tsum /t;
+			motor_current = sum /t;
 			//printf("protect_current = %d\n",motor_current);
 		}
 		if(k>8)
 		{
-			motor_current = ksum / k;
+			motor_current = 50;
 		}
-		printf("real_volt = %d %d\r\n",(int)real_volt,motor_current);
+		//printf("real_volt = %d\r\n",(int)real_volt);
 		MotorCDC = 0;
-
-		if(motor_current > 300){
-			agecnt ++;
-			if(agecnt > 12){
-				AgeingFlag = TRUE;
-			}
-		}else{
-			AgeingFlag = FALSE;
-			agecnt = 0;
-		}
-		
 	}
 
 

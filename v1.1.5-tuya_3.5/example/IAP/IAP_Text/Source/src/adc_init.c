@@ -62,7 +62,6 @@ u16 check_battery_level(u32 value)
 	tmp_silent = (HT_ADC->DR[0] & 0x0FFF); 
 	//printf("\ntmp_silent = %d\n",tmp_silent);
 	real_silent = ((float)tmp_silent/4096)*3300; //* 200;
-
 	printf("volatage value =  %d\r\n",real_silent);
 	if(lowpower_flag)//低电量
 	{
@@ -74,7 +73,7 @@ u16 check_battery_level(u32 value)
 
 
 
-	if(real_silent >= MEDIUM_BATTERY && flagVolage != 1)  
+	if(real_silent >= MEDIUM_BATTERY && flagVolage!=1)
 	{
 		flagVolage = 0;
 		printf("full\r\n");

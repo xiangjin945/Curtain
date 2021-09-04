@@ -351,7 +351,7 @@ void data_handle(unsigned short offset)
 		  lednetworkflag = bt_work_state;
 		  all_data_update_fun();
       if(!MotorRunStatus){
-        check_battery_level(0);   //TODO: 电量检测
+        check_battery_level(0);
       }
 		  
 		}
