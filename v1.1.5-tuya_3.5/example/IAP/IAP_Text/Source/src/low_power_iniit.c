@@ -259,6 +259,12 @@ void Exit_Init(void)
     EXTI_WakeupEventIntConfig(ENABLE);
     NVIC_EnableIRQ(EVWUP_IRQn);
 #endif
+
+    AFIO_GPxConfig(GPIO_PA,           	GPIO_PIN_10,     AFIO_MODE_1);
+	GPIO_DirectionConfig(HT_GPIOA,    GPIO_PIN_10,     GPIO_DIR_IN);
+	GPIO_PullResistorConfig(HT_GPIOA, GPIO_PIN_10, 		GPIO_PR_DISABLE);
+    GPIO_InputConfig(HT_GPIOA,        GPIO_PIN_10,          ENABLE);
+
 }
 //PWRCU_DeepSleep2(PWRCU_SLEEP_ENTRY_WFI);
 void low_power_init(void)

@@ -866,18 +866,21 @@ void bt_test_uart_service(void)
 				}
 
 				break;
+        case 4:
+          printf("%s\n",MCU_VER);
+          break;
 			  case 5: //led control
-				if(Production_test_uart_rx_buf[4]==0)
-				{
-					SET_LED(SET);
-					printf("1");
-				}
-				else
-				{
-					SET_LED(RESET);
-					printf("1");
-				}
-				break;
+          if(Production_test_uart_rx_buf[4]==0)
+          {
+            SET_LED(SET);
+            printf("1");
+          }
+          else
+          {
+            SET_LED(RESET);
+            printf("1");
+          }
+				  break;
 
 
 			  case 6:

@@ -1,7 +1,7 @@
 /*
  * @Author: i4season.xiang
  * @Date: 2021-03-24 09:52:24
- * @LastEditTime: 2021-09-01 21:56:36
+ * @LastEditTime: 2021-09-10 20:43:01
  * @FilePath: \curtain\v1.1.5-tuya_3.5\example\IAP\IAP_Text\Source\src\head.c
  */
 #include "head.h"
@@ -335,7 +335,7 @@ void low_power_consump_fun(void)
 			adc_init();
 			// uart0_init();	//B7.B8, TYBN1
 			// usart0_init();	//C4.C5, 调试用
-			// key_init();			  //按键初始化
+			key_init();			  //按键唤醒重新初始化
 			
 		}
 }
@@ -709,6 +709,10 @@ void I4_LedTwinkle(void){
 void I4_ProductionTest(void)
 {
 	I4_LedTwinkle();	
+	// 	AFIO_GPxConfig(GPIO_PA, GPIO_PIN_15, AFIO_MODE_1);
+	// GPIO_DirectionConfig(HT_GPIOA, GPIO_PIN_15, GPIO_DIR_IN);
+	// GPIO_PullResistorConfig(HT_GPIOA, GPIO_PIN_15, GPIO_PR_DISABLE);
+	// GPIO_InputConfig(HT_GPIOA, GPIO_PIN_15, ENABLE);
 	//printf("test\n");
 	while(1){
 		
